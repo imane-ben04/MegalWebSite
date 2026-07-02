@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+    <title>MEGAL - A propos</title>
+    <style>
+        :root {
+            --primary: #2A37F4;
+            --black: #000000;
+            --white: #FFFFFF;
+            --page-width: 1728px;
+            --font-main: Inter, Nunito, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+            background: var(--white);
+            color: var(--black);
+            font-family: var(--font-main);
+            line-height: 1.35;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            border: 0;
+            background: none;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .site-header {
+            position: relative;
+            z-index: 20;
+            background: var(--white);
+        }
+
+        .header-inner {
+            width: min(100%, var(--page-width));
+            height: 172px;
+            margin: 0 auto;
+            padding: 24px 68px 0;
+            display: grid;
+            grid-template-columns: 230px 1fr 230px;
+            align-items: start;
+        }
+
+        .logo-link {
+            width: 176px;
+            display: inline-flex;
+        }
+
+        .logo-link img {
+            width: 176px;
+            height: auto;
+        }
+
+       .main-nav {
+    justify-self: center;
+    margin-top: 25px;
+    /* Suppression du min-width fixe qui forçait un espace vide */
+    display: inline-flex; /* Permet à la barre de s'adapter exactement à son contenu */
+    align-items: center;
+    border: 3px solid var(--primary);
+    border-radius: 999px;
+    background: var(--white);
+    box-shadow: 0 2px 13px rgba(42, 55, 244, 0.3); /* Optionnel: adoucissement de l'ombre */
+    overflow: hidden;
+    padding: 3px; /* Ajoute un léger espace interne uniforme pour un effet "capsule" propre */
+}
+
+.main-nav a {
+    height: 52px;
+    padding: 0 32px; /* Augmentation légère pour une meilleure répartition */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 999px; /* Appliqué à tous les liens pour que les hovers/actifs soient arrondis */
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a[aria-current="page"] {
+    color: var(--white);
+    background: var(--primary);
+}
+
+        .header-actions {
+            justify-self: end;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-toggle,
+        .menu-toggle {
+            width: 54px;
+            height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            background: var(--white);
+            box-shadow: 0 2px 13px var(--primary);
+        }
+
+        .theme-toggle img {
+            width: 34px;
+            height: 34px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 23px;
+            height: 3px;
+            border-radius: 999px;
+            background: var(--primary);
+        }
+
+        .about-section {
+            width: min(100%, var(--page-width));
+            min-height: 1040px;
+            margin: 0 auto;
+            padding: 103px 76px 110px;
+            display: grid;
+            grid-template-columns: 560px minmax(0, 1fr);
+            column-gap: 42px;
+        }
+
+        .brand-panel {
+            padding-top: 172px;
+            text-align: center;
+        }
+
+        .brand-panel .tagline {
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 10px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .brand-panel img {
+            width: 400px;
+            margin: 0px auto 0;
+        }
+
+        .about-copy {
+            max-width: 930px;
+        }
+
+        .about-copy h1 {
+            color: var(--black);
+            font-size: clamp(2.1rem, 3vw, 3.35rem);
+            line-height: 1.05;
+            font-weight: 700;
+            letter-spacing: 0;
+        }
+
+        .about-copy p {
+            margin-top: 34px;
+            color: var(--black);
+            font-size: clamp(1.45rem, 2.25vw, 2.35rem);
+            line-height: 1.28;
+            font-weight: 500;
+        }
+
+        .about-copy span {
+            color: var(--primary);
+        }
+
+        .site-footer {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .footer-inner {
+            width: min(var(--page-width), 100%);
+            min-height: 300px;
+            margin: 0 auto;
+            padding: 0 92px 43px;
+            display: grid;
+            grid-template-columns: 401px 1fr 1fr;
+            align-items: center;
+            gap: 149px;
+        }
+
+        .footer-logo img {
+            width: 401px;
+            height: 385px;
+            object-fit: cover;
+        }
+
+        .footer-column {
+            align-self: start;
+            margin-top: 126px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.33rem;
+            line-height: 1.1;
+            font-weight: 900;
+        }
+
+        .footer-column ul {
+            margin-top: 17px;
+            list-style: none;
+        }
+
+        .footer-column li,
+        .footer-column a {
+            color: var(--white);
+            font-size: 1.33rem;
+            line-height: 1.42;
+            font-weight: 600;
+        }
+
+        .social-links {
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .social-links img {
+            width: 66px;
+            height: 66px;
+        }
+
+        .copyright {
+            width: min(var(--page-width), 100%);
+            margin: 0 auto;
+            padding: 0 24px 53px;
+            color: var(--white);
+            text-align: center;
+            font-size: 1.28rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 1240px) {
+            .header-inner {
+                height: 148px;
+                padding: 20px 36px 0;
+                grid-template-columns: 180px 1fr 120px;
+            }
+
+            .logo-link,
+            .logo-link img {
+                width: 150px;
+            }
+
+            .main-nav a {
+                padding: 0 20px;
+                font-size: 19px;
+            }
+
+            .theme-toggle,
+            .menu-toggle {
+                width: 54px;
+                height: 54px;
+            }
+
+            .about-section {
+                min-height: 820px;
+                padding: 96px 44px;
+                grid-template-columns: 390px minmax(0, 1fr);
+                column-gap: 40px;
+            }
+
+            .brand-panel {
+                padding-top: 120px;
+            }
+
+            .brand-panel .tagline {
+                font-size: 13px;
+                letter-spacing: 6px;
+            }
+
+            .brand-panel img {
+                width: 310px;
+            }
+
+            .footer-inner {
+                padding: 0 56px;
+                grid-template-columns: 300px 1fr 1.2fr;
+                gap: 70px;
+            }
+
+            .footer-logo {
+                width: 300px;
+                height: 288px;
+            }
+
+            .footer-column h4,
+            .footer-column li,
+            .footer-column a {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 860px) {
+            body.nav-open {
+                overflow: hidden;
+            }
+
+            .header-inner {
+                height: 96px;
+                padding: 16px 20px 0;
+                grid-template-columns: 1fr auto;
+            }
+
+            .logo-link,
+            .logo-link img {
+                width: 126px;
+            }
+
+            .header-actions {
+                margin-top: 0;
+            }
+
+            .theme-toggle,
+            .menu-toggle {
+                width: 46px;
+                height: 46px;
+            }
+
+            .theme-toggle img {
+                width: 29px;
+                height: 29px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            .main-nav {
+                position: fixed;
+                inset: 86px 18px auto;
+                min-height: 0;
+                margin-top: 0;
+                display: grid;
+                transform: translateY(-18px);
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 180ms ease, opacity 180ms ease;
+            }
+
+            body.nav-open .main-nav {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .main-nav a {
+                width: 100%;
+                height: 48px;
+                font-size: 18px;
+            }
+
+            .about-section {
+                min-height: 0;
+                padding: 76px 24px 88px;
+                grid-template-columns: 1fr;
+                row-gap: 54px;
+            }
+
+            .brand-panel {
+                order: 2;
+                padding-top: 0;
+            }
+
+            .brand-panel .tagline {
+                white-space: normal;
+                line-height: 1.6;
+            }
+
+            .brand-panel img {
+                width: min(300px, 78vw);
+                margin-top: 34px;
+            }
+
+            .about-copy {
+                max-width: 100%;
+            }
+
+            .about-copy h1 {
+                font-size: clamp(2.45rem, 10vw, 3.5rem);
+            }
+
+            .about-copy p {
+                margin-top: 24px;
+                font-size: clamp(1.45rem, 5vw, 2.1rem);
+            }
+
+            .footer-inner {
+                min-height: 0;
+                padding: 42px 24px 30px;
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+
+            .footer-logo {
+                width: min(260px, 76vw);
+                height: auto;
+                aspect-ratio: 401 / 385;
+                margin: 0 auto;
+            }
+
+            .footer-column {
+                margin-top: 0;
+            }
+
+            .social-links {
+                justify-content: center;
+                gap: 34px;
+            }
+
+            .social-links img {
+                width: 62px;
+                height: 62px;
+            }
+
+            .copyright {
+                padding-bottom: 34px;
+                font-size: 21px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-inner {
+                padding-inline: 14px;
+            }
+
+            .about-section {
+                padding: 58px 18px 72px;
+            }
+
+            .about-copy p {
+                line-height: 1.34;
+            }
+
+            .footer-column h4,
+            .footer-column li,
+            .footer-column a {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="acceuil.html" aria-label="Accueil MEGAL">
+                <img src="../photo/logonew.png" width="341" height="138" alt="MEGAL">
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+                <a href="acceuil.html" >Accueil</a>
+                <a href="service.html">Services</a>
+                <a href="projet.html">Projet</a>
+                <a href="apropos.html" aria-current="page">A propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="about-section">
+            <div class="brand-panel">
+                <img src="../photo/logo_new.png" alt="MEGAL Menuiserie tout genre d'aluminium">
+            </div>
+
+            <div class="about-copy">
+                <h1>Qui sommes nous?</h1>
+                <p>
+                    Fondée en 1996 par Benrabah Makhlouf, <span>MEGAL</span> est une entreprise spécialisée dans la menuiserie en aluminium. Nous concevons et fabriquons des portes et fenêtres, qu'elles soient simples (sans volets roulants) ou monoblocs (intégrant des volets roulants), en aluminium <span>HPS</span>. Nous proposons également des volets roulants avec lames injectées ou renforcées pour plus de sécurité, ainsi que d'autre services.<br>
+                    Nous vous invitons à découvrir notre showroom, où nous serons ravis de vous conseiller et de vous accompagner dans la réalisation de votre projet.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="../photo/logo_new.png" alt="MEGAL">
+            </div>
+
+            <div class="footer-column">
+                <h4>MEGAL</h4>
+                <ul>
+                    <li><a href="acceuil.html">Accueil</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="projet.html">Projet</a></li>
+                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li>bonada26@gmail.com</li>
+                    <li>+213 550 11 60 87</li>
+                    <li>+213 552 89 41 97</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook MEGAL"><img src="../photo/Facebook.svg" alt=""></a>
+                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL"><img src="../photo/LinkedIn Circled.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 MEGAL. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("#main-nav");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = document.body.classList.toggle("nav-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        nav.addEventListener("click", (event) => {
+            if (event.target.matches("a")) {
+                document.body.classList.remove("nav-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
+</body>
+</html>
