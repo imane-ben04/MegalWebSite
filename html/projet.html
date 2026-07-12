@@ -109,6 +109,16 @@
 .main-nav a[aria-current="page"] {
     color: var(--white);
     background: var(--primary);
+    view-transition-name: active-nav;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(active-nav) {
+    animation-duration: 260ms;
+    animation-timing-function: ease;
 }
 
         .header-actions {
