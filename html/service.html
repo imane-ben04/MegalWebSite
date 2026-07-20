@@ -288,6 +288,12 @@
             object-fit: cover;
         }
 
+        .window-gallery .volet-card img {
+            height: 420px;
+            object-fit: contain;
+            background: var(--white);
+        }
+
         .volet-card:not(.has-caption) img {
             height: 430px;
         }
@@ -476,6 +482,10 @@
                 height: 280px;
             }
 
+            .window-gallery .volet-card img {
+                height: 340px;
+            }
+
             .volet-card:not(.has-caption) img {
                 height: 372px;
             }
@@ -654,6 +664,10 @@
             .volet-card img {
                 height: auto;
                 aspect-ratio: 480 / 352;
+            }
+
+            .window-gallery .volet-card img {
+                height: auto;
             }
 
             .volet-card:not(.has-caption) img {
@@ -882,8 +896,42 @@
             </div>
 
             <div class="service-panels">
-                <div class="service-panel" role="tabpanel" id="panel-fenetre-coulissante" aria-labelledby="tab-fenetre-coulissante"></div>
-                <div class="service-panel" role="tabpanel" id="panel-fenetre-ouvrante" aria-labelledby="tab-fenetre-ouvrante" hidden></div>
+
+                <div class="service-panel" role="tabpanel" id="panel-fenetre-coulissante" aria-labelledby="tab-fenetre-coulissante">
+                    <p class="service-panel-intro">Design moderne et gain d'espace, elle offre une ouverture fluide et une vue dégagée vers l'extérieur</p>
+                    <div class="panel-gallery volet-gallery window-gallery">
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Coulissante-Optima.jpg" alt="">
+                            <p>Fenetre Coulissante Optima</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Coulissante-Pro.jpg" alt="">
+                            <p>Fenetre Coulissante Pro</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Coulissante-Therma.jpg" alt="">
+                            <p>Fenetre Coulissante Therma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-panel" role="tabpanel" id="panel-fenetre-ouvrante" aria-labelledby="tab-fenetre-ouvrante" hidden>
+                    <p class="service-panel-intro">Avec nos fenetres ouvrantes a la francaise vous gagnez plus d'ouverture et en meme temps plus d'étancheité a l'eau et au vent</p>
+                    <div class="panel-gallery volet-gallery window-gallery">
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Ouvrante-Optima.jpg" alt="">
+                            <p>Fenetre Ouvrante Optima</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Ouvrante-Pro.jpg" alt="">
+                            <p>Fenetre Ouvrante Pro</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Ouvrante-Therma.jpg" alt="">
+                            <p>Fenetre Ouvrante Therma</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="service-panel" role="tabpanel" id="panel-fenetre-oscillo" aria-labelledby="tab-fenetre-oscillo" hidden>
                     <p class="service-panel-intro">Deux en un avec Megal, vous pouvez bénéficiez d'une fenetre ouvrante a la francaise et a soufflet en meme temps</p>
@@ -895,7 +943,15 @@
                 </div>
                 
                 <div class="service-panel" role="tabpanel" id="panel-baie-vitre" aria-labelledby="tab-baie-vitre" hidden></div>
-                <div class="service-panel" role="tabpanel" id="panel-portes" aria-labelledby="tab-portes" hidden></div>
+                
+                <div class="service-panel" role="tabpanel" id="panel-portes" aria-labelledby="tab-portes" hidden>
+                    <p class="service-panel-intro">Les portes aluminium se caracterise par leur légerete et leur robustesse avec des lignes fines</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/porte1.png" alt="">
+                        <img src="../photo/porte2.png" alt="">
+                        <img src="../photo/porte3.png" alt="">
+                    </div>
+                </div>
 
                 <div class="service-panel" role="tabpanel" id="panel-volet-roulant" aria-labelledby="tab-volet-roulant" hidden>
                     <p class="service-panel-intro">Alliant esthétique et sécurité, les volets roulants Megal s’intègrent discrètement à toute façade. Sur mesure, ils s’adaptent à toutes fenêtres, en neuf comme en rénovation</p>
