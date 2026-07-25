@@ -167,7 +167,7 @@
     position: relative;
     overflow: hidden;
     height:630px;
-    background-image:url("../photo/Rectangle 6.png");
+    
     background-size:cover;
     background-position:center;
 }
@@ -181,9 +181,19 @@
     background:rgba(255,255,255,.45);
     backdrop-filter:blur(3px);
     -webkit-backdrop-filter:blur(3px);
+    z-index:2;
+}
 
-    z-index:2;          /* IMPORTANT */
-    pointer-events:none;
+/* Le fondu du bord droit uniquement */
+.hero::before{
+    -webkit-mask-image: linear-gradient(to right,
+        black 0%,
+        black calc(100% - 30px),
+        transparent 100%);
+    mask-image: linear-gradient(to right,
+        black 0%,
+        black calc(100% - 30px),
+        transparent 100%);
 }
 
 .hero::after{
@@ -1020,8 +1030,9 @@
 
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
                 <a href="acceuil.html" aria-current="page">Accueil</a>
-                <a href="service.html">Services</a>
-                <a href="projet.html">Projet</a>
+                <a href="service.html">Produits</a>
+                <a href="projet.html">Projets</a>
+                <a href="accessoires.html">Accessoires</a>
                 <a href="apropos.html">A propos</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -1167,8 +1178,9 @@
                 <h4>MEGAL</h4>
                 <ul>
                     <li><a href="acceuil.html">Accueil</a></li>
-                    <li><a href="service.html">Services</a></li>
+                    <li><a href="service.html">Produits</a></li>
                     <li><a href="projet.html">Projet</a></li>
+                    <li><a href="accessoires.html">Accessoires</a></li>
                     <li><a href="apropos.html">A propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -1221,9 +1233,9 @@
 const hero = document.querySelector(".hero");
 
 const images = [
-    "../photo/porte_acceuil.png",
-    "../photo/Rectangle 6.png",
-    "../photo/Rectangle 24.png"
+    "../photo/image_acceuil1.jpg",
+    "../photo/image_acceuil2.webp",
+    "../photo/image_acceuil3.webp"
 ];
 
 let current = 0;
@@ -1238,7 +1250,7 @@ const bg2 = document.createElement("div");
     bg.style.position = "absolute";
     bg.style.inset = "0";
     bg.style.backgroundSize = "cover";
-    bg.style.backgroundPosition = "center 25%";
+    bg.style.backgroundPosition = "center 40%";
     bg.style.zIndex = "0";
 });
 

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
     <title>MEGAL - Projets</title>
     <style>
         :root {
@@ -235,7 +238,7 @@
         .projects-section {
             width: min(100%, var(--page-width));
             margin: 0 auto;
-            padding: 87px 68px 126px;
+            padding: 22px 68px 124px;
         }
 
         .section-heading {
@@ -353,6 +356,52 @@
             font-weight: 800;
             white-space: nowrap;
         }
+
+.photo-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+#currentPhoto{
+    max-width:80%;
+    max-height:85vh;
+    border-radius:10px;
+}
+
+.nav-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    font-size:35px;
+    cursor:pointer;
+    background:rgba(255,255,255,.8);
+}
+
+.prev{
+    left:40px;
+}
+
+.next{
+    right:40px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:45px;
+    color:white;
+    cursor:pointer;
+}
 
         
 
@@ -558,8 +607,9 @@
 
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
                 <a href="acceuil.html">Accueil</a>
-                <a href="service.html">Services</a>
+                <a href="service.html">Produits</a>
                 <a href="projet.html" aria-current="page">Projets</a>
+                <a href="accessoires.html">Accessoires</a>
                 <a href="apropos.html">A propos</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -598,8 +648,11 @@
                             <img src="../photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
-                        <a href="#">Plus de photos</a>
+                        <a href="#" onclick="toggleGallery(event,1)">Plus de photos</a>
                     </div>
+                    
+                    
+
                 </article>
 
                 <article class="project-card">
@@ -614,8 +667,10 @@
                             <img src="../photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
-                        <a href="#">Plus de photos</a>
+                        <a href="#" onclick="toggleGallery(event,2)">Plus de photos</a>
                     </div>
+
+                   
                 </article>
 
                 <article class="project-card">
@@ -630,8 +685,11 @@
                             <img src="../photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
-                        <a href="#">Plus de photos</a>
+                        <a href="#" onclick="toggleGallery(event,3)">Plus de photos</a>
                     </div>
+                   
+                
+
                 </article>
 
                 <article class="project-card">
@@ -646,8 +704,11 @@
                             <img src="../photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
-                        <a href="#">Plus de photos</a>
+                        <a href="#" onclick="toggleGallery(event,4)">Plus de photos</a>
                     </div>
+
+                 
+
                 </article>
 
                 <article class="project-card">
@@ -662,8 +723,11 @@
                             <img src="../photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
-                        <a href="#">Plus de photos</a>
+                        <a href="#" onclick="toggleGallery(event,5)">Plus de photos</a>
                     </div>
+
+                   
+
                 </article>
 
                 <article class="project-card">
@@ -678,8 +742,11 @@
                             <img src="../photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
-                        <a href="#">Plus de photos</a>
+                        <a href="#" onclick="toggleGallery(event,6)">Plus de photos</a>
                     </div>
+
+              
+
                 </article>
             </div>
         </section>
@@ -695,8 +762,9 @@
                 <h4>MEGAL</h4>
                 <ul>
                     <li><a href="acceuil.html">Accueil</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="projet.html">Projet</a></li>
+                    <li><a href="service.html">Produits</a></li>
+                    <li><a href="projet.html">Projets</a></li>
+                    <li><a href="accessoires.html">Accessoires</a></li>
                     <li><a href="apropos.html">A propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -721,6 +789,18 @@
         </div>
     </footer>
 
+ <div id="photoModal" class="photo-modal">
+
+    <span class="close">&times;</span>
+
+    <button class="nav-btn prev" onclick="previousPhoto()">&#10094;</button>
+
+    <img id="currentPhoto" src="" alt="">
+
+    <button class="nav-btn next" onclick="nextPhoto()">&#10095;</button>
+
+ </div>
+
     <script>
         const menuToggle = document.querySelector(".menu-toggle");
         const nav = document.querySelector("#main-nav");
@@ -736,6 +816,96 @@
                 menuToggle.setAttribute("aria-expanded", "false");
             }
         });
+const galleries = {
+
+    1:[
+        "../photo/image_acceuil1.jpg",
+        "../photo/image_acceuil2.webp",
+        "../photo/image_acceuil3.jpg"
+    ],
+
+    2:[
+        "../photo/projet2-1.jpg",
+        "../photo/projet2-2.jpg",
+        "../photo/projet2-3.jpg"
+    ],
+
+    3:[
+        "../photo/projet3-1.jpg",
+        "../photo/projet3-2.jpg",
+        "../photo/projet3-3.jpg"
+    ]
+
+};
+
+let currentGallery = [];
+let currentIndex = 0;
+
+function toggleGallery(event,id){
+
+    event.preventDefault();
+
+    currentGallery = galleries[id];
+    currentIndex = 0;
+
+    showPhoto();
+
+    document.getElementById("photoModal").style.display="flex";
+}
+
+function showPhoto(){
+
+    document.getElementById("currentPhoto").src =
+        currentGallery[currentIndex];
+
+}
+
+function nextPhoto(){
+
+    currentIndex++;
+
+    if(currentIndex >= currentGallery.length){
+
+        currentIndex = 0;
+
+    }
+
+    showPhoto();
+
+}
+
+function previousPhoto(){
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+
+        currentIndex = currentGallery.length-1;
+
+    }
+
+    showPhoto();
+
+}
+
+document.querySelector(".close").onclick = function(){
+
+    document.getElementById("photoModal").style.display="none";
+
+};
+
+window.onclick = function(e){
+
+    if(e.target.id==="photoModal"){
+
+        document.getElementById("photoModal").style.display="none";
+
+    }
+
+};
+
     </script>
+
+
 </body>
 </html>
