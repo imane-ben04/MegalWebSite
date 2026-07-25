@@ -17,7 +17,7 @@
             --white: #FFFFFF;
             --page-width: 1728px;
             --content-width: 1588px;
-            --font-main: Inter, Nunito, Arial, sans-serif;
+            --font-main:Nunito, Arial, sans-serif;
         }
 
         * {
@@ -107,6 +107,7 @@
     white-space: nowrap;
     border-radius: 999px; /* Appliqué à tous les liens pour que les hovers/actifs soient arrondis */
     transition: background 0.2s ease, color 0.2s ease;
+    font-family: Inter;
 }
 
 .main-nav a[aria-current="page"] {
@@ -637,7 +638,7 @@
 
             <div class="projects-grid">
                 <article class="project-card">
-                    <img src="../photo/Rectangle 41.png" alt="Projet MEGAL à Mila">
+                    <img src="../photo/projet1-2.jpg" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <h2>Project name</h2>
                         <p>Lorem ipsum jidkolfjjfjhfhhd jhdjd hdhdj jdjjs ieie jehhf hodksue hhdy hsye ksizo hdhdye gsgye gsgszy sjhdhd</p>
@@ -656,7 +657,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/Rectangle 41.png" alt="Projet MEGAL à Mila">
+                    <img src="../photo/projet2-1.jpg" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <h2>Project name</h2>
                         <p>Lorem ipsum jidkolfjjfjhfhhd jhdjd hdhdj jdjjs ieie jehhf hodksue hhdy hsye ksizo hdhdye gsgye gsgszy sjhdhd</p>
@@ -674,7 +675,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/Rectangle 41.png" alt="Projet MEGAL à Mila">
+                    <img src="../photo/projet3.png" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <h2>Project name</h2>
                         <p>Lorem ipsum jidkolfjjfjhfhhd jhdjd hdhdj jdjjs ieie jehhf hodksue hhdy hsye ksizo hdhdye gsgye gsgszy sjhdhd</p>
@@ -693,7 +694,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/Rectangle 41.png" alt="Projet MEGAL à Mila">
+                    <img src="../photo/projet4-1.png" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <h2>Project name</h2>
                         <p>Lorem ipsum jidkolfjjfjhfhhd jhdjd hdhdj jdjjs ieie jehhf hodksue hhdy hsye ksizo hdhdye gsgye gsgszy sjhdhd</p>
@@ -712,7 +713,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/Rectangle 41.png" alt="Projet MEGAL à Mila">
+                    <img src="../photo/projet5-3.jpg" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <h2>Project name</h2>
                         <p>Lorem ipsum jidkolfjjfjhfhhd jhdjd hdhdj jdjjs ieie jehhf hodksue hhdy hsye ksizo hdhdye gsgye gsgszy sjhdhd</p>
@@ -802,7 +803,7 @@
  </div>
 
     <script>
-        const menuToggle = document.querySelector(".menu-toggle");
+    const menuToggle = document.querySelector(".menu-toggle");
         const nav = document.querySelector("#main-nav");
 
         menuToggle.addEventListener("click", () => {
@@ -816,25 +817,53 @@
                 menuToggle.setAttribute("aria-expanded", "false");
             }
         });
+        
 const galleries = {
 
     1:[
-        "../photo/image_acceuil1.jpg",
-        "../photo/image_acceuil2.webp",
-        "../photo/image_acceuil3.jpg"
+        "../photo/projet1-1.jpg",
+        "../photo/projet1-2.jpg",
+        "../photo/projet1-3.jpg"
     ],
 
     2:[
         "../photo/projet2-1.jpg",
+        "../photo/projet2-3.jpg",
         "../photo/projet2-2.jpg",
-        "../photo/projet2-3.jpg"
+        "../photo/projet2-4.jpg"
     ],
 
     3:[
         "../photo/projet3-1.jpg",
         "../photo/projet3-2.jpg",
+        "../photo/projet3.png",
         "../photo/projet3-3.jpg"
+    ],
+     
+     4:[
+        "../photo/projet4-1.png",
+        "../photo/projet4-2.png",
+        "../photo/projet4-3.png",
+       
+    ],
+
+    5:[
+        "../photo/projet5-3.jpg",
+        "../photo/projet5-2.jpg",
+        "../photo/projet5-1.jpg",
+       
+    ],
+
+    6:[
+        "../photo/projet6-1.jpg",
+        "../photo/projet6-2.jpg",
+        "../photo/projet6-1.png",
+       
     ]
+
+
+
+
 
 };
 
