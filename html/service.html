@@ -206,16 +206,16 @@
         }
 
         .service-tab {
-            min-height: 74px;
-            padding: 16px 28px;
+            min-height: 62px;
+            padding: 12px 22px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             border: 2px solid var(--primary);
-            border-radius: 22px;
+            border-radius: 18px;
             background: var(--white);
             color: var(--primary);
-            font-size: clamp(1.25rem, 1.75vw, 2rem);
+            font-size: clamp(1.05rem, 1.35vw, 1.55rem);
             line-height: 1.15;
             font-weight: 500;
             text-align: center;
@@ -273,6 +273,19 @@
             object-fit: cover;
         }
 
+        .baie-gallery-groups {
+            display: grid;
+            gap: 48px;
+        }
+
+        .baie-gallery-title {
+            margin: 0 0 20px;
+            color: var(--primary);
+            font-size: clamp(1.35rem, 1.8vw, 2rem);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
         .volet-gallery {
             gap: 18px;
         }
@@ -318,6 +331,32 @@
             font-size: clamp(0.95rem, 1vw, 1.08rem);
             line-height: 1.18;
             font-weight: 700;
+        }
+
+        .coulissante-gallery .volet-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .coulissante-gallery .volet-card h3 {
+            margin: 0;
+            padding: 18px 20px 8px;
+            color: var(--primary);
+            font-size: clamp(1.2rem, 1.2vw, 1.35rem);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .coulissante-gallery .volet-card p {
+            min-height: 0;
+            padding: 0 20px 24px;
+            display: block;
+            color: #6A6A6A;
+            font-size: clamp(1.2rem, 1.05vw, 1.15rem);
+            line-height: 1.45;
+            font-weight: 500;
+            text-align: left;
         }
 
         .site-footer {
@@ -461,13 +500,13 @@
             }
 
             .service-tabs {
-                gap: 28px 22px;
+                gap: 22px 18px;
             }
 
             .service-tab {
-                min-height: 66px;
-                padding-inline: 20px;
-                border-radius: 20px;
+                min-height: 58px;
+                padding-inline: 16px;
+                border-radius: 16px;
             }
 
             .panel-gallery {
@@ -638,8 +677,8 @@
             }
 
             .service-tab {
-                min-height: 58px;
-                padding: 13px 16px;
+                min-height: 52px;
+                padding: 10px 14px;
             }
 
             .service-panels {
@@ -878,7 +917,7 @@
 
     <main class="services-page">
         <section class="services-heading" aria-labelledby="services-title">
-            <h1 id="services-title">Nos Services</h1>
+            <h1 id="services-title">Nos Produits</h1>
             <p>Découvrez les services fourni par <span>MEGAL</span> en détails</p>
         </section>
 
@@ -899,36 +938,42 @@
 
                 <div class="service-panel" role="tabpanel" id="panel-fenetre-coulissante" aria-labelledby="tab-fenetre-coulissante">
                     <p class="service-panel-intro">Design moderne et gain d'espace, elle offre une ouverture fluide et une vue dégagée vers l'extérieur</p>
-                    <div class="panel-gallery volet-gallery window-gallery">
+                    <div class="panel-gallery volet-gallery window-gallery coulissante-gallery">
                         <div class="volet-card has-caption">
-                            <img src="../photo/Coulissante-Optima.jpg" alt="">
-                            <p>Fenetre Coulissante Optima</p>
+                            <img src="../photo/Coulissante-Optima.png" alt="">
+                            <h3>Fenetre Coulissante Optima</h3>
+                            <p>Le système H31 Optima est une solution coulissante économique et élégante. Son design fin, son coulissement fluide et sa capacité à offrir une bonne étanchéité à l'eau, une résistance au vent et une perméabilité à l'air fiable en font un excellent choix pour les fenêtres et portes-fenêtres de dimensions standard.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Coulissante-Pro.jpg" alt="">
-                            <p>Fenetre Coulissante Pro</p>
+                            <h3>Fenetre Coulissante Pro</h3>
+                            <p>Le système H36 Pro allie finesse des profils, robustesse et polyvalence. Il accepte des ouvrants jusqu'à 120 kg et assure une bonne étanchéité à l'eau, une résistance élevée au vent ainsi qu'une bonne perméabilité à l'air, pour un confort durable.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Coulissante-Therma.jpg" alt="">
-                            <p>Fenetre Coulissante Therma</p>
+                            <h3>Fenetre Coulissante Therma</h3>
+                            <p>Le système H48t Therma offre une excellente isolation grâce à sa rupture de pont thermique. Il supporte des vitrages jusqu'à 32 mm et des ouvrants jusqu'à 150 kg, tout en garantissant une haute étanchéité à l'eau, une excellente résistance au vent et une perméabilité à l'air optimisée.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="service-panel" role="tabpanel" id="panel-fenetre-ouvrante" aria-labelledby="tab-fenetre-ouvrante" hidden>
                     <p class="service-panel-intro">Avec nos fenetres ouvrantes a la francaise vous gagnez plus d'ouverture et en meme temps plus d'étancheité a l'eau et au vent</p>
-                    <div class="panel-gallery volet-gallery window-gallery">
+                    <div class="panel-gallery volet-gallery window-gallery coulissante-gallery">
                         <div class="volet-card has-caption">
                             <img src="../photo/Ouvrante-Optima.jpg" alt="">
-                            <p>Fenetre Ouvrante Optima</p>
+                            <h3>Fenetre Ouvrante Optima</h3>
+                            <p>Le système H40 Optima est une solution battante fiable et économique. Son design épuré, sa structure robuste et sa bonne étanchéité à l'eau, sa résistance au vent et sa perméabilité à l'air performante en font un excellent choix pour les projets résidentiels et commerciaux.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Ouvrante-Pro.jpg" alt="">
-                            <p>Fenetre Ouvrante Pro</p>
+                            <h3>Fenetre Ouvrante Pro</h3>
+                            <p>Le système H52 Pro combine robustesse et design moderne pour les fenêtres et portes. Il accepte des ouvrants jusqu'à 120 kg et assure une bonne étanchéité à l'eau, une résistance élevée au vent ainsi qu'une bonne perméabilité à l'air, garantissant confort et durabilité.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Ouvrante-Therma.jpg" alt="">
-                            <p>Fenetre Ouvrante Therma</p>
+                            <h3>Fenetre Ouvrante Therma</h3>
+                            <p>Le système H58t Therma offre une excellente isolation grâce à sa rupture de pont thermique. Il supporte des vitrages jusqu'à 38 mm et des ouvrants jusqu'à 150 kg, tout en garantissant une haute étanchéité à l'eau, une excellente résistance au vent et une perméabilité à l'air optimisée.</p>
                         </div>
                     </div>
                 </div>
@@ -942,7 +987,27 @@
                     </div>
                 </div>
                 
-                <div class="service-panel" role="tabpanel" id="panel-baie-vitre" aria-labelledby="tab-baie-vitre" hidden></div>
+                <div class="service-panel" role="tabpanel" id="panel-baie-vitre" aria-labelledby="tab-baie-vitre" hidden>
+                    <p class="service-panel-intro">Élégante et lumineuse, la baie vitrée apporte une ouverture généreuse et une finition moderne à vos espaces.</p>
+                    <div class="baie-gallery-groups">
+                        <div class="baie-gallery-row">
+                            <h2 class="baie-gallery-title">Repliable</h2>
+                            <div class="panel-gallery oscillo-gallery">
+                                <img src="../photo/repliable2.png" alt="">
+                                <img src="../photo/repliable-1.png" alt="">
+                                <img src="../photo/repliable3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="baie-gallery-row">
+                            <h2 class="baie-gallery-title">Seuil Zero</h2>
+                            <div class="panel-gallery oscillo-gallery">
+                                <img src="../photo/zero1.jfif" alt="">
+                                <img src="../photo/zero2.jpg" alt="">
+                                <img src="../photo/zero3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="service-panel" role="tabpanel" id="panel-portes" aria-labelledby="tab-portes" hidden>
                     <p class="service-panel-intro">Les portes aluminium se caracterise par leur légerete et leur robustesse avec des lignes fines</p>
@@ -956,22 +1021,45 @@
                 <div class="service-panel" role="tabpanel" id="panel-volet-roulant" aria-labelledby="tab-volet-roulant" hidden>
                     <p class="service-panel-intro">Alliant esthétique et sécurité, les volets roulants Megal s’intègrent discrètement à toute façade. Sur mesure, ils s’adaptent à toutes fenêtres, en neuf comme en rénovation</p>
                     <div class="panel-gallery volet-gallery">
-                    <div class="volet-card has-caption">
-                        <img src="../photo/Rectangle 57.png" alt="Lame aluminium injecté pour volet roulant">
-                        <p>Volet roulant en lame aluminium injecté qui peut etre manuel ou motorisé</p>
-                    </div>
-                    <div class="volet-card">
-                        <img src="../photo/Rectangle 67.png" alt="Volet roulant installé sur fenêtre">
-                    </div>
-                    <div class="volet-card has-caption">
-                        <img src="../photo/Rectangle 57-1.png" alt="Lame aluminium extrudé pour volet roulant">
-                        <p>Volet roulant en lame aluminium extrudé contre le vol et le vandalisme, est qui peut etre motorisé seulement</p>
-                    </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Rectangle 57.png" alt="Lame aluminium injecté pour volet roulant">
+                            <p>Volet roulant en lame aluminium injecté qui peut etre manuel ou motorisé</p>
+                        </div>
+                        <div class="volet-card">
+                            <img src="../photo/Rectangle 67.png" alt="Volet roulant installé sur fenêtre">
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Rectangle 57-1.png" alt="Lame aluminium extrudé pour volet roulant">
+                            <p>Volet roulant en lame aluminium extrudé contre le vol et le vandalisme, est qui peut etre motorisé seulement</p>
+                        </div>
                     </div>
                 </div>
-                <div class="service-panel" role="tabpanel" id="panel-cloture" aria-labelledby="tab-cloture" hidden></div>
-                <div class="service-panel" role="tabpanel" id="panel-garde-corps" aria-labelledby="tab-garde-corps" hidden></div>
-                <div class="service-panel" role="tabpanel" id="panel-pergola" aria-labelledby="tab-pergola" hidden></div>
+
+                <div class="service-panel" role="tabpanel" id="panel-cloture" aria-labelledby="tab-cloture" hidden>
+                    <p class="service-panel-intro">Les clôtures en aluminium H75 Clôtura de HPS allient intimité, robustesse et design contemporain. Résistantes aux intempéries, elles s’adaptent à tous les espaces extérieurs.</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/ChatGPT Image Jul 21, 2026, 12_22_12 PM.png" alt="">
+                        <img src="../photo/cloture-3.png" alt="">
+                        <img src="../photo/cloture-1.jfif" alt="">
+                    </div>
+                </div>
+
+                <div class="service-panel" role="tabpanel" id="panel-garde-corps" aria-labelledby="tab-garde-corps" hidden>
+                    <p class="service-panel-intro">Sécurisez vos balcons, terrasses et escaliers avec les garde-corps en aluminium HPS. Un design moderne, une résistance durable et une finition soignée pour tous vos projets.</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/garde-corps-1.jpg" alt="">
+                        <img src="../photo/garde-corps-2.jpg" alt="">
+                        <img src="../photo/garde-corps-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="service-panel" role="tabpanel" id="panel-pergola" aria-labelledby="tab-pergola" hidden>
+                    <p class="service-panel-intro">Transformez votre terrasse avec les pergolas en aluminium HPS. Robustes, esthétiques et résistantes aux intempéries, elles offrent un confort optimal en toute saison.</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/pergola-1.jfif" alt="">
+                        <img src="../photo/pergola-2.webp" alt="">
+                        <img src="../photo/pergola-3.webp" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
