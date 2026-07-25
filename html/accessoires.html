@@ -205,13 +205,13 @@
         .handles-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto auto;
             gap: 8px;
             background: #f5f5f5;
         }
 
-        .handles-grid img:nth-child(2) {
-            grid-row: span 2;
+        .handles-grid img:nth-child(3) {
+            grid-column: 1 / -1;
         }
 
         /* TEXTES ACCESSOIRES */
