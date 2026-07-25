@@ -163,7 +163,201 @@
             background: var(--primary);
         }
 
-  
+        .services-page {
+            width: min(100%, var(--page-width));
+            min-height: 550px;
+            margin: 0 auto;
+            padding: 28px 68px 120px;
+        }
+
+        .services-heading {
+            width: min(960px, 100%);
+            margin: 0 auto;
+            font-family: Nunito, Inter, Arial, sans-serif;
+            text-align: center;
+        }
+
+        .services-heading h1 {
+            color: var(--black);
+            font-size: clamp(2.15rem, 3vw, 3.35rem);
+            line-height: 1.04;
+            font-weight: 800;
+        }
+
+        .services-heading p {
+            margin-top: 8px;
+            color: #6A6A6A;
+            font-size: clamp(1.35rem, 2.15vw, 2.25rem);
+            line-height: 1.25;
+            font-weight: 500;
+        }
+
+        .services-heading span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .service-tabs {
+            width: min(1420px, 100%);
+            margin: 86px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px 29px;
+        }
+
+        .service-tab {
+            min-height: 62px;
+            padding: 12px 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--primary);
+            border-radius: 18px;
+            background: var(--white);
+            color: var(--primary);
+            font-size: clamp(1.05rem, 1.35vw, 1.55rem);
+            line-height: 1.15;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(42, 55, 244, 0.34);
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+        }
+
+        .service-tab:hover,
+        .service-tab:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(42, 55, 244, 0.34);
+            outline: none;
+        }
+
+        .service-tab[aria-selected="true"] {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 5px 13px rgba(42, 55, 244, 0.36);
+        }
+
+        .service-panels {
+            width: min(1420px, 100%);
+            margin: 38px auto 0;
+        }
+
+        .service-panel[hidden] {
+            display: none;
+        }
+
+        .service-panel {
+            font-family: Nunito, Inter, Arial, sans-serif;
+            color: #6A6A6A;
+            text-align: center;
+        }
+
+        .service-panel-intro {
+            width: min(1060px, 100%);
+            margin: 0 auto 42px;
+            font-size: clamp(1.25rem, 1.55vw, 1.75rem);
+            line-height: 1.35;
+            font-weight: 500;
+        }
+
+        .panel-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: start;
+            gap: 50px;
+        }
+
+        .oscillo-gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .baie-gallery-groups {
+            display: grid;
+            gap: 48px;
+        }
+
+        .baie-gallery-title {
+            margin: 0 0 20px;
+            color: var(--primary);
+            font-size: clamp(1.35rem, 1.8vw, 2rem);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .volet-gallery {
+            gap: 18px;
+        }
+
+        .volet-card {
+            min-width: 0;
+            background: var(--white);
+        }
+
+        .volet-card img {
+            width: 100%;
+            height: 338px;
+            object-fit: cover;
+        }
+
+        .window-gallery .volet-card img {
+            height: 420px;
+            object-fit: contain;
+            background: var(--white);
+        }
+
+        .volet-card:not(.has-caption) img {
+            height: 430px;
+        }
+
+        .volet-card.has-caption {
+            border: 2px solid var(--primary);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .volet-card.has-caption img {
+            border-bottom: 0;
+        }
+
+        .volet-card p {
+            min-height: 88px;
+            padding: 13px 18px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: clamp(0.95rem, 1vw, 1.08rem);
+            line-height: 1.18;
+            font-weight: 700;
+        }
+
+        .coulissante-gallery .volet-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .coulissante-gallery .volet-card h3 {
+            margin: 0;
+            padding: 18px 20px 8px;
+            color: var(--primary);
+            font-size: clamp(1.2rem, 1.2vw, 1.35rem);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .coulissante-gallery .volet-card p {
+            min-height: 0;
+            padding: 0 20px 24px;
+            display: block;
+            color: #6A6A6A;
+            font-size: clamp(1.2rem, 1.05vw, 1.15rem);
+            line-height: 1.45;
+            font-weight: 500;
+            text-align: left;
+        }
 
         .site-footer {
             background: var(--primary);
@@ -298,10 +492,41 @@
             }
 
             .services-section,
+            .services-page,
             .partners-section,
             .atelier-section {
                 padding-left: 34px;
                 padding-right: 34px;
+            }
+
+            .service-tabs {
+                gap: 22px 18px;
+            }
+
+            .service-tab {
+                min-height: 58px;
+                padding-inline: 16px;
+                border-radius: 16px;
+            }
+
+            .panel-gallery {
+                gap: 26px;
+            }
+
+            .volet-gallery {
+                gap: 14px;
+            }
+
+            .volet-card img {
+                height: 280px;
+            }
+
+            .window-gallery .volet-card img {
+                height: 340px;
+            }
+
+            .volet-card:not(.has-caption) img {
+                height: 372px;
             }
 
             .services-grid {
@@ -432,10 +657,60 @@
             }
 
             .services-section,
+            .services-page,
             .partners-section,
             .atelier-section {
                 padding-left: 20px;
                 padding-right: 20px;
+            }
+
+            .services-page {
+                min-height: 0;
+                padding-top: 32px;
+                padding-bottom: 76px;
+            }
+
+            .service-tabs {
+                margin-top: 48px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+            .service-tab {
+                min-height: 52px;
+                padding: 10px 14px;
+            }
+
+            .service-panels {
+                margin-top: 42px;
+            }
+
+            .service-panel-intro {
+                margin-bottom: 30px;
+            }
+
+            .panel-gallery {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .oscillo-gallery img,
+            .volet-card {
+                width: min(420px, 100%);
+                margin: 0 auto;
+            }
+
+            .volet-card img {
+                height: auto;
+                aspect-ratio: 480 / 352;
+            }
+
+            .window-gallery .volet-card img {
+                height: auto;
+            }
+
+            .volet-card:not(.has-caption) img {
+                height: auto;
             }
 
             .services-grid {
@@ -589,6 +864,19 @@
                 width: 100%;
             }
 
+            .services-heading {
+                width: 100%;
+            }
+
+            .services-heading h1 {
+                font-size: 2.35rem;
+            }
+
+            .service-tabs {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
             .service-card figure {
                 height: auto;
                 aspect-ratio: 480 / 352;
@@ -628,7 +916,154 @@
         </div>
     </header>
 
-   
+    <main class="services-page">
+        <section class="services-heading" aria-labelledby="services-title">
+            <h1 id="services-title">Nos Produits</h1>
+            <p>Découvrez les services fourni par <span>MEGAL</span> en détails</p>
+        </section>
+
+        <section class="service-tabs-section" aria-label="Catégories de services">
+            <div class="service-tabs" role="tablist" aria-label="Services MEGAL">
+                <button class="service-tab" type="button" role="tab" id="tab-fenetre-coulissante" aria-selected="true" aria-controls="panel-fenetre-coulissante">Fenetre coulissante</button>
+                <button class="service-tab" type="button" role="tab" id="tab-fenetre-ouvrante" aria-selected="false" aria-controls="panel-fenetre-ouvrante">Fenetre ouvrante</button>
+                <button class="service-tab" type="button" role="tab" id="tab-fenetre-oscillo" aria-selected="false" aria-controls="panel-fenetre-oscillo">Fenêtre oscillo-battante</button>
+                <button class="service-tab" type="button" role="tab" id="tab-baie-vitre" aria-selected="false" aria-controls="panel-baie-vitre">Baie vitré</button>
+                <button class="service-tab" type="button" role="tab" id="tab-portes" aria-selected="false" aria-controls="panel-portes">Portes</button>
+                <button class="service-tab" type="button" role="tab" id="tab-volet-roulant" aria-selected="false" aria-controls="panel-volet-roulant">Volet roulant</button>
+                <button class="service-tab" type="button" role="tab" id="tab-cloture" aria-selected="false" aria-controls="panel-cloture">Cloture en aluminium</button>
+                <button class="service-tab" type="button" role="tab" id="tab-garde-corps" aria-selected="false" aria-controls="panel-garde-corps">Garde Corps Alum</button>
+                <button class="service-tab" type="button" role="tab" id="tab-pergola" aria-selected="false" aria-controls="panel-pergola">Pergola</button>
+            </div>
+
+            <div class="service-panels">
+
+                <div class="service-panel" role="tabpanel" id="panel-fenetre-coulissante" aria-labelledby="tab-fenetre-coulissante">
+                    <p class="service-panel-intro">Design moderne et gain d'espace, elle offre une ouverture fluide et une vue dégagée vers l'extérieur</p>
+                    <div class="panel-gallery volet-gallery window-gallery coulissante-gallery">
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Coulissante-Optima.png" alt="">
+                            <h3>Fenetre Coulissante Optima</h3>
+                            <p>Le système H31 Optima est une solution coulissante économique et élégante. Son design fin, son coulissement fluide et sa capacité à offrir une bonne étanchéité à l'eau, une résistance au vent et une perméabilité à l'air fiable en font un excellent choix pour les fenêtres et portes-fenêtres de dimensions standard.</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Coulissante-Pro.jpg" alt="">
+                            <h3>Fenetre Coulissante Pro</h3>
+                            <p>Le système H36 Pro allie finesse des profils, robustesse et polyvalence. Il accepte des ouvrants jusqu'à 120 kg et assure une bonne étanchéité à l'eau, une résistance élevée au vent ainsi qu'une bonne perméabilité à l'air, pour un confort durable.</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Coulissante-Therma.jpg" alt="">
+                            <h3>Fenetre Coulissante Therma</h3>
+                            <p>Le système H48t Therma offre une excellente isolation grâce à sa rupture de pont thermique. Il supporte des vitrages jusqu'à 32 mm et des ouvrants jusqu'à 150 kg, tout en garantissant une haute étanchéité à l'eau, une excellente résistance au vent et une perméabilité à l'air optimisée.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-panel" role="tabpanel" id="panel-fenetre-ouvrante" aria-labelledby="tab-fenetre-ouvrante" hidden>
+                    <p class="service-panel-intro">Avec nos fenetres ouvrantes a la francaise vous gagnez plus d'ouverture et en meme temps plus d'étancheité a l'eau et au vent</p>
+                    <div class="panel-gallery volet-gallery window-gallery coulissante-gallery">
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Ouvrante-Optima.jpg" alt="">
+                            <h3>Fenetre Ouvrante Optima</h3>
+                            <p>Le système H40 Optima est une solution battante fiable et économique. Son design épuré, sa structure robuste et sa bonne étanchéité à l'eau, sa résistance au vent et sa perméabilité à l'air performante en font un excellent choix pour les projets résidentiels et commerciaux.</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Ouvrante-Pro.jpg" alt="">
+                            <h3>Fenetre Ouvrante Pro</h3>
+                            <p>Le système H52 Pro combine robustesse et design moderne pour les fenêtres et portes. Il accepte des ouvrants jusqu'à 120 kg et assure une bonne étanchéité à l'eau, une résistance élevée au vent ainsi qu'une bonne perméabilité à l'air, garantissant confort et durabilité.</p>
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Ouvrante-Therma.jpg" alt="">
+                            <h3>Fenetre Ouvrante Therma</h3>
+                            <p>Le système H58t Therma offre une excellente isolation grâce à sa rupture de pont thermique. Il supporte des vitrages jusqu'à 38 mm et des ouvrants jusqu'à 150 kg, tout en garantissant une haute étanchéité à l'eau, une excellente résistance au vent et une perméabilité à l'air optimisée.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-panel" role="tabpanel" id="panel-fenetre-oscillo" aria-labelledby="tab-fenetre-oscillo" hidden>
+                    <p class="service-panel-intro">Deux en un avec Megal, vous pouvez bénéficiez d'une fenetre ouvrante a la francaise et a soufflet en meme temps</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/Rectangle 64.png" alt="Fenêtre oscillo-battante ouverte">
+                        <img src="../photo/Rectangle 65.png" alt="Mécanisme de fenêtre oscillo-battante">
+                        <img src="../photo/Rectangle 66.png" alt="Fenêtre oscillo-battante dans une cuisine">
+                    </div>
+                </div>
+                
+                <div class="service-panel" role="tabpanel" id="panel-baie-vitre" aria-labelledby="tab-baie-vitre" hidden>
+                    <p class="service-panel-intro">Élégante et lumineuse, la baie vitrée apporte une ouverture généreuse et une finition moderne à vos espaces.</p>
+                    <div class="baie-gallery-groups">
+                        <div class="baie-gallery-row">
+                            <h2 class="baie-gallery-title">Repliable</h2>
+                            <div class="panel-gallery oscillo-gallery">
+                                <img src="../photo/repliable2.png" alt="">
+                                <img src="../photo/repliable-1.png" alt="">
+                                <img src="../photo/repliable3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="baie-gallery-row">
+                            <h2 class="baie-gallery-title">Seuil Zero</h2>
+                            <div class="panel-gallery oscillo-gallery">
+                                <img src="../photo/zero1.jfif" alt="">
+                                <img src="../photo/zero2.jpg" alt="">
+                                <img src="../photo/zero3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-panel" role="tabpanel" id="panel-portes" aria-labelledby="tab-portes" hidden>
+                    <p class="service-panel-intro">Les portes aluminium se caracterise par leur légerete et leur robustesse avec des lignes fines</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/porte1.png" alt="">
+                        <img src="../photo/porte2.png" alt="">
+                        <img src="../photo/porte3.png" alt="">
+                    </div>
+                </div>
+
+                <div class="service-panel" role="tabpanel" id="panel-volet-roulant" aria-labelledby="tab-volet-roulant" hidden>
+                    <p class="service-panel-intro">Alliant esthétique et sécurité, les volets roulants Megal s’intègrent discrètement à toute façade. Sur mesure, ils s’adaptent à toutes fenêtres, en neuf comme en rénovation</p>
+                    <div class="panel-gallery volet-gallery">
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Rectangle 57.png" alt="Lame aluminium injecté pour volet roulant">
+                            <p>Volet roulant en lame aluminium injecté qui peut etre manuel ou motorisé</p>
+                        </div>
+                        <div class="volet-card">
+                            <img src="../photo/Rectangle 67.png" alt="Volet roulant installé sur fenêtre">
+                        </div>
+                        <div class="volet-card has-caption">
+                            <img src="../photo/Rectangle 57-1.png" alt="Lame aluminium extrudé pour volet roulant">
+                            <p>Volet roulant en lame aluminium extrudé contre le vol et le vandalisme, est qui peut etre motorisé seulement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-panel" role="tabpanel" id="panel-cloture" aria-labelledby="tab-cloture" hidden>
+                    <p class="service-panel-intro">Les clôtures en aluminium H75 Clôtura de HPS allient intimité, robustesse et design contemporain. Résistantes aux intempéries, elles s’adaptent à tous les espaces extérieurs.</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/ChatGPT Image Jul 21, 2026, 12_22_12 PM.png" alt="">
+                        <img src="../photo/cloture-3.png" alt="">
+                        <img src="../photo/cloture-1.jfif" alt="">
+                    </div>
+                </div>
+
+                <div class="service-panel" role="tabpanel" id="panel-garde-corps" aria-labelledby="tab-garde-corps" hidden>
+                    <p class="service-panel-intro">Sécurisez vos balcons, terrasses et escaliers avec les garde-corps en aluminium HPS. Un design moderne, une résistance durable et une finition soignée pour tous vos projets.</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/garde-corps-1.jpg" alt="">
+                        <img src="../photo/garde-corps-2.jpg" alt="">
+                        <img src="../photo/garde-corps-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="service-panel" role="tabpanel" id="panel-pergola" aria-labelledby="tab-pergola" hidden>
+                    <p class="service-panel-intro">Transformez votre terrasse avec les pergolas en aluminium HPS. Robustes, esthétiques et résistantes aux intempéries, elles offrent un confort optimal en toute saison.</p>
+                    <div class="panel-gallery oscillo-gallery">
+                        <img src="../photo/pergola-1.jfif" alt="">
+                        <img src="../photo/pergola-2.webp" alt="">
+                        <img src="../photo/pergola-3.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
@@ -683,6 +1118,23 @@
                 document.body.classList.remove("nav-open");
                 menuToggle.setAttribute("aria-expanded", "false");
             }
+        });
+
+        const serviceTabs = document.querySelectorAll(".service-tab");
+        const servicePanels = document.querySelectorAll(".service-panel");
+
+        serviceTabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                const targetPanel = document.getElementById(tab.getAttribute("aria-controls"));
+
+                serviceTabs.forEach((item) => item.setAttribute("aria-selected", "false"));
+                servicePanels.forEach((panel) => panel.hidden = true);
+
+                tab.setAttribute("aria-selected", "true");
+                if (targetPanel) {
+                    targetPanel.hidden = false;
+                }
+            });
         });
 
 
