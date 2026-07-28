@@ -1134,6 +1134,10 @@
                 tab.setAttribute("aria-selected", "true");
                 if (targetPanel) {
                     targetPanel.hidden = false;
+                    targetPanel.scrollIntoView({
+                        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+                        block: "start"
+                    });
                 }
             });
         });
