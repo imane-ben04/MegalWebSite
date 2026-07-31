@@ -84,7 +84,7 @@
        .main-nav {
     justify-self: center;
     margin-top: 25px;
-    /* Suppression du min-width fixe qui forçait un espace vide */
+    /* Suppression du min-width fixe qui foréait un espace vide */
     display: inline-flex; /* Permet à la barre de s'adapter exactement à son contenu */
     align-items: center;
     border: 3px solid var(--primary);
@@ -97,7 +97,7 @@
 
 .main-nav a {
     height: 52px;
-    padding: 0 32px; /* Augmentation légère pour une meilleure répartition */
+    padding: 0 32px; /* Augmentation légére pour une meilleure répartition */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -131,24 +131,6 @@
             display: flex;
             align-items: center;
             gap: 16px;
-        }
-
-        .theme-toggle,
-        .menu-toggle {
-            width: 54px;
-            height: 54px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid var(--primary);
-            border-radius: 50%;
-            background: var(--white);
-            box-shadow: 0 2px 13px var(--primary);
-        }
-
-        .theme-toggle img {
-            width: 34px;
-            height: 34px;
         }
 
         .menu-toggle {
@@ -216,17 +198,6 @@
     z-index:2;
     pointer-events:none;
 }
-
-
-        .hero-content {
-            width: min(100%, var(--page-width));
-            height: 100%;
-            margin: 0 auto;
-            padding-left: 69px;
-            padding-top: 216px;
-            position: relative;
-            z-index: 3;
-        }
 
         .hero h1 {
             color: var(--primary);
@@ -713,11 +684,6 @@
                 height: 520px;
             }
 
-            .hero-content {
-                padding-left: 42px;
-                padding-top: 170px;
-            }
-
             .stats-row,
             .services-grid,
             .atelier-inner,
@@ -793,17 +759,6 @@
                 margin-top: 0;
             }
 
-            .theme-toggle,
-            .menu-toggle {
-                width: 46px;
-                height: 46px;
-            }
-
-            .theme-toggle img {
-                width: 28px;
-                height: 28px;
-            }
-
             .menu-toggle {
                 display: inline-flex;
             }
@@ -839,10 +794,6 @@
 
             .hero::before {
                 width: 66%;
-            }
-
-            .hero-content {
-                padding: 145px 22px 0;
             }
 
             .intro-section {
@@ -900,7 +851,7 @@
     color: var(--white);
     font-size: clamp(1.05rem, 1.45vw, 1.45rem);
     
-    /* Changez 900 par une valeur plus légère, ex: 500 (Medium) ou 600 (Semi-Bold) */
+    /* Changez 900 par une valeur plus légére, ex: 500 (Medium) ou 600 (Semi-Bold) */
     font-weight: 450; 
     
     text-align: center;
@@ -1008,11 +959,6 @@
                 width: 78%;
             }
 
-            .hero-content {
-                padding-top: 118px;
-                padding-left: 18px;
-            }
-
             .hero h1 {
                 font-size: 3rem;
             }
@@ -1049,7 +995,7 @@
                 <a href="service.html">Produits</a>
                 <a href="projet.html">Projets</a>
                 <a href="accessoires.html">Accessoires</a>
-                <a href="apropos.html">A propos</a>
+                <a href="apropos.html">À propos</a>
                 <a href="contact.html">Contact</a>
             </nav>
 
@@ -1109,7 +1055,7 @@
                     <figure><img src="../photo/Rectangle 18.png" alt="Fenêtre ouvrante"></figure>
                     <div>
                         <h3>Fenêtre ouvrante</h3>
-                        <p>Une ouverture classique et pratique, idéale pour allier aération et luminosité dans toutes vos pièces</p>
+                        <p>Une ouverture classique et pratique, idéale pour allier aération et luminosité dans toutes vos piéces</p>
                     </div>
                 </article>
 
@@ -1125,7 +1071,7 @@
                     <figure><img src="../photo/Rectangle 23.png" alt="Baie vitrée"></figure>
                     <div>
                         <h3>Baie vitrée</h3>
-                        <p>Élégante et lumineuse, elle offre une vue panoramique sur l'extérieur tout en sublimant votre intérieur</p>
+                        <p>élégante et lumineuse, elle offre une vue panoramique sur l'extérieur tout en sublimant votre intérieur</p>
                     </div>
                 </article>
 
@@ -1133,7 +1079,7 @@
                     <figure><img src="../photo/Rectangle 24.png" alt="Fenêtre oscillo-battante"></figure>
                     <div>
                         <h3>Fenêtre oscillo-battante</h3>
-                        <p>Polyvalente et sécurisée, elle combine ouverture française et basculante pour une ventilation maîtrisée</p>
+                        <p>Polyvalente et sécurisée, elle combine ouverture franéaise et basculante pour une ventilation maétrisée</p>
                     </div>
                 </article>
 
@@ -1197,7 +1143,7 @@
                     <li><a href="service.html">Produits</a></li>
                     <li><a href="projet.html">Projet</a></li>
                     <li><a href="accessoires.html">Accessoires</a></li>
-                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -1217,7 +1163,7 @@
         </div>
 
         <div class="copyright">
-            &copy; 2025 MEGAL. All rights reserved.
+            &copy; 2025 MEGAL. Tous droits réservés.
         </div>
     </footer>
     <div id="assistant">
@@ -1292,7 +1238,7 @@ setInterval(() => {
 
 const assistant = document.getElementById("assistant");
 
-// apparition 5 secondes après le chargement
+// apparition 5 secondes aprés le chargement
 window.addEventListener("load", () => {
 
     setTimeout(() => {

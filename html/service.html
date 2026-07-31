@@ -84,7 +84,7 @@
        .main-nav {
     justify-self: center;
     margin-top: 25px;
-    /* Suppression du min-width fixe qui forçait un espace vide */
+    /* Suppression du min-width fixe qui foréait un espace vide */
     display: inline-flex; /* Permet à la barre de s'adapter exactement à son contenu */
     align-items: center;
     border: 3px solid var(--primary);
@@ -97,7 +97,7 @@
 
 .main-nav a {
     height: 52px;
-    padding: 0 32px; /* Augmentation légère pour une meilleure répartition */
+    padding: 0 32px; /* Augmentation légére pour une meilleure répartition */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -131,24 +131,6 @@
             display: flex;
             align-items: center;
             gap: 16px;
-        }
-
-        .theme-toggle,
-        .menu-toggle {
-            width: 54px;
-            height: 54px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid var(--primary);
-            border-radius: 50%;
-            background: var(--white);
-            box-shadow: 0 2px 13px var(--primary);
-        }
-
-        .theme-toggle img {
-            width: 34px;
-            height: 34px;
         }
 
         .menu-toggle {
@@ -428,25 +410,6 @@
             font-weight: 700;
         }
 
-
-
-
-@keyframes float{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-8px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-
-}
-
         @media (max-width: 1180px) {
             .header-inner {
                 height: 132px;
@@ -467,40 +430,11 @@
                 min-width: auto;
                 padding: 0 18px;
             }
-
-            .hero {
-                height: 520px;
-            }
-
-            .hero-content {
-                padding-left: 42px;
-                padding-top: 170px;
-            }
-
-            .stats-row,
-            .services-grid,
-            .atelier-inner,
-            .footer-inner {
+.footer-inner {
                 width: 100%;
             }
-
-            .stats-row {
-                gap: 32px;
-            }
-
-            .stat-card {
-                width: 50%;
-            }
-
-            .services-section,
             .services-page,
-            .partners-section,
-            .atelier-section {
-                padding-left: 34px;
-                padding-right: 34px;
-            }
-
-            .service-tabs {
+.service-tabs {
                 gap: 22px 18px;
             }
 
@@ -529,27 +463,7 @@
             .volet-card:not(.has-caption) img {
                 height: 372px;
             }
-
-            .services-grid {
-                grid-template-columns: repeat(2, minmax(0, 480px));
-                justify-content: center;
-            }
-
-            .partner-logos {
-                gap: 80px;
-            }
-
-            .atelier-inner {
-                grid-template-columns: minmax(360px, 520px) 1fr;
-                gap: 34px;
-            }
-
-            .atelier-photo {
-                width: 100%;
-                height: auto;
-            }
-
-            .footer-inner {
+.footer-inner {
                 padding: 0 48px 43px;
                 grid-template-columns: 300px 1fr 1.25fr;
                 gap: 60px;
@@ -583,17 +497,6 @@
                 margin-top: 0;
             }
 
-            .theme-toggle,
-            .menu-toggle {
-                width: 46px;
-                height: 46px;
-            }
-
-            .theme-toggle img {
-                width: 28px;
-                height: 28px;
-            }
-
             .menu-toggle {
                 display: inline-flex;
             }
@@ -621,51 +524,8 @@
                 width: 100%;
                 height: 46px;
             }
-
-            .hero {
-                height: 440px;
-                background-position: 58% center;
-            }
-
-            .hero::before {
-                width: 66%;
-            }
-
-            .hero-content {
-                padding: 145px 22px 0;
-            }
-
-            .intro-section {
-                padding: 32px 20px 68px;
-            }
-
-            .stats-row {
-                margin-top: 42px;
-                flex-direction: column;
-                align-items: center;
-                gap: 22px;
-            }
-
-            .stat-card {
-                width: min(460px, 100%);
-                min-height: 82px;
-                padding: 12px 20px;
-            }
-
-            .stat-card img {
-                width: 42px;
-                height: 42px;
-            }
-
-            .services-section,
             .services-page,
-            .partners-section,
-            .atelier-section {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .services-page {
+.services-page {
                 min-height: 0;
                 padding-top: 32px;
                 padding-bottom: 76px;
@@ -714,98 +574,6 @@
                 height: auto;
             }
 
-            .services-grid {
-                margin-top: 44px;
-                grid-template-columns: minmax(0, 480px);
-                row-gap: 24px;
-            }
-
-            .service-card {
-                min-height: auto;
-            }
-
-            .button-row {
-                margin-top: 42px;
-            }
-
-            .primary-button {
-    min-width: 457px;
-    min-height: 73px;
-    padding: 18px 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    background: var(--primary);
-    color: var(--white);
-    font-size: clamp(1.05rem, 1.45vw, 1.45rem);
-    
-    /* Changez 900 par une valeur plus légère, ex: 500 (Medium) ou 600 (Semi-Bold) */
-    font-weight: 450; 
-    
-    text-align: center;
-    box-shadow: none;
-}
-
-            .partners-section {
-                padding-top: 12px;
-                padding-bottom: 86px;
-            }
-
-            .partner-logos {
-                margin-top: 56px;
-                grid-template-columns: 1fr;
-                gap: 34px;
-                min-height: 0;
-            }
-
-            .partner-logos img:nth-child(1),
-            .partner-logos img:nth-child(2) {
-                width: 220px;
-            }
-
-            .atelier-section {
-                padding-bottom: 88px;
-            }
-
-            .atelier-inner {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                text-align: center;
-            }
-
-            .atelier-photo {
-                width: min(420px, 100%);
-                margin: 0 auto;
-            }
-
-            .atelier-content {
-                padding-top: 0;
-            }
-
-            .address-row {
-                margin-top: 26px;
-                justify-content: center;
-                gap: 14px;
-            }
-
-            .address-row img {
-                width: 46px;
-                height: 46px;
-            }
-
-            .atelier-content .primary-button,
-            .question-section .primary-button {
-                min-width: 0;
-                width: min(330px, 100%);
-                min-height: 58px;
-                margin-top: 30px;
-            }
-
-            .question-section {
-                padding-bottom: 76px;
-            }
-
             .footer-inner {
                 min-height: 300;
                 padding: 44px 24px 38px;
@@ -840,27 +608,6 @@
                 padding-inline: 14px;
             }
 
-            .hero {
-                height: 360px;
-            }
-
-            .hero::before {
-                width: 78%;
-            }
-
-            .hero-content {
-                padding-top: 118px;
-                padding-left: 18px;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.35rem;
-            }
-
             .section-heading {
                 width: 100%;
             }
@@ -877,16 +624,7 @@
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
-
-            .service-card figure {
-                height: auto;
-                aspect-ratio: 480 / 352;
-            }
-
-            .stat-card span {
-                white-space: normal;
-            }
-        }
+}
     </style>
 </head>
 <body>
@@ -902,7 +640,7 @@
                 <a href="service.html" aria-current="page">Produits</a>
                 <a href="projet.html">Projets</a>
                 <a href="accessoires.html">Accessoires</a>
-                <a href="apropos.html">A propos</a>
+                <a href="apropos.html">À propos</a>
                 <a href="contact.html">Contact</a>
             </nav>
 
@@ -920,19 +658,19 @@
     <main class="services-page">
         <section class="services-heading" aria-labelledby="services-title">
             <h1 id="services-title">Nos Produits</h1>
-            <p>Découvrez les produits fourni par <span>MEGAL</span> en détails</p>
+            <p>Découvrez les produits fournis par <span>MEGAL</span> en détail</p>
         </section>
 
         <section class="service-tabs-section" aria-label="Catégories de services">
             <div class="service-tabs" role="tablist" aria-label="Services MEGAL">
-                <button class="service-tab" type="button" role="tab" id="tab-fenetre-coulissante" aria-selected="true" aria-controls="panel-fenetre-coulissante">Fenetre coulissante</button>
-                <button class="service-tab" type="button" role="tab" id="tab-fenetre-ouvrante" aria-selected="false" aria-controls="panel-fenetre-ouvrante">Fenetre ouvrante</button>
+                <button class="service-tab" type="button" role="tab" id="tab-fenetre-coulissante" aria-selected="true" aria-controls="panel-fenetre-coulissante">Fenêtre coulissante</button>
+                <button class="service-tab" type="button" role="tab" id="tab-fenetre-ouvrante" aria-selected="false" aria-controls="panel-fenetre-ouvrante">Fenêtre ouvrante</button>
                 <button class="service-tab" type="button" role="tab" id="tab-fenetre-oscillo" aria-selected="false" aria-controls="panel-fenetre-oscillo">Fenêtre oscillo-battante</button>
-                <button class="service-tab" type="button" role="tab" id="tab-baie-vitre" aria-selected="false" aria-controls="panel-baie-vitre">Baie vitré</button>
+                <button class="service-tab" type="button" role="tab" id="tab-baie-vitre" aria-selected="false" aria-controls="panel-baie-vitre">Baie vitrée</button>
                 <button class="service-tab" type="button" role="tab" id="tab-portes" aria-selected="false" aria-controls="panel-portes">Portes</button>
                 <button class="service-tab" type="button" role="tab" id="tab-volet-roulant" aria-selected="false" aria-controls="panel-volet-roulant">Volet roulant</button>
-                <button class="service-tab" type="button" role="tab" id="tab-cloture" aria-selected="false" aria-controls="panel-cloture">Cloture en aluminium</button>
-                <button class="service-tab" type="button" role="tab" id="tab-garde-corps" aria-selected="false" aria-controls="panel-garde-corps">Garde Corps Aluminium</button>
+                <button class="service-tab" type="button" role="tab" id="tab-cloture" aria-selected="false" aria-controls="panel-cloture">Clôture en aluminium</button>
+                <button class="service-tab" type="button" role="tab" id="tab-garde-corps" aria-selected="false" aria-controls="panel-garde-corps">Garde-corps en aluminium</button>
                 <button class="service-tab" type="button" role="tab" id="tab-pergola" aria-selected="false" aria-controls="panel-pergola">Pergola</button>
             </div>
 
@@ -943,54 +681,54 @@
                     <div class="panel-gallery volet-gallery window-gallery coulissante-gallery">
                         <div class="volet-card has-caption">
                             <img src="../photo/Coulissante-Optima.png" alt="">
-                            <h3>Fenetre Coulissante Optima</h3>
+                            <h3>Fenêtre Coulissante Optima</h3>
                             <p>Le système H31 Optima est une solution coulissante économique et élégante. Son design fin, son coulissement fluide et sa capacité à offrir une bonne étanchéité à l'eau, une résistance au vent et une perméabilité à l'air fiable en font un excellent choix pour les fenêtres et portes-fenêtres de dimensions standard.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Coulissante-Pro.jpg" alt="">
-                            <h3>Fenetre Coulissante Pro</h3>
+                            <h3>Fenêtre Coulissante Pro</h3>
                             <p>Le système H36 Pro allie finesse des profils, robustesse et polyvalence. Il accepte des ouvrants jusqu'à 120 kg et assure une bonne étanchéité à l'eau, une résistance élevée au vent ainsi qu'une bonne perméabilité à l'air, pour un confort durable.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Coulissante-Therma.jpg" alt="">
-                            <h3>Fenetre Coulissante Therma</h3>
+                            <h3>Fenêtre Coulissante Therma</h3>
                             <p>Le système H68t Therma offre une excellente isolation grâce à sa rupture de pont thermique. Il supporte des vitrages jusqu'à 32 mm et des ouvrants jusqu'à 150 kg, tout en garantissant une haute étanchéité à l'eau, une excellente résistance au vent et une perméabilité à l'air optimisée.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="service-panel" role="tabpanel" id="panel-fenetre-ouvrante" aria-labelledby="tab-fenetre-ouvrante" hidden>
-                    <p class="service-panel-intro">Avec nos fenetres ouvrantes a la francaise vous gagnez plus d'ouverture et en meme temps plus d'étancheité a l'eau et au vent</p>
+                    <p class="service-panel-intro">Avec nos fenêtres ouvrantes à la française vous gagnez plus d'ouverture et en même temps plus d'étanchéité à l'eau et au vent</p>
                     <div class="panel-gallery volet-gallery window-gallery coulissante-gallery">
                         <div class="volet-card has-caption">
                             <img src="../photo/Ouvrante-Optima.jpg" alt="">
-                            <h3>Fenetre Ouvrante Optima</h3>
+                            <h3>Fenêtre Ouvrante Optima</h3>
                             <p>Le système H40 Optima est une solution battante fiable et économique. Son design épuré, sa structure robuste et sa bonne étanchéité à l'eau, sa résistance au vent et sa perméabilité à l'air performante en font un excellent choix pour les projets résidentiels et commerciaux.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Ouvrante-Pro.jpg" alt="">
-                            <h3>Fenetre Ouvrante Pro</h3>
+                            <h3>Fenêtre Ouvrante Pro</h3>
                             <p>Le système H52 Pro combine robustesse et design moderne pour les fenêtres et portes. Il accepte des ouvrants jusqu'à 120 kg et assure une bonne étanchéité à l'eau, une résistance élevée au vent ainsi qu'une bonne perméabilité à l'air, garantissant confort et durabilité.</p>
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Ouvrante-Therma.jpg" alt="">
-                            <h3>Fenetre Ouvrante Therma</h3>
+                            <h3>Fenêtre Ouvrante Therma</h3>
                             <p>Le système H58t Therma offre une excellente isolation grâce à sa rupture de pont thermique. Il supporte des vitrages jusqu'à 38 mm et des ouvrants jusqu'à 150 kg, tout en garantissant une haute étanchéité à l'eau, une excellente résistance au vent et une perméabilité à l'air optimisée.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="service-panel" role="tabpanel" id="panel-fenetre-oscillo" aria-labelledby="tab-fenetre-oscillo" hidden>
-                    <p class="service-panel-intro">Deux en un avec Megal, vous pouvez bénéficiez d'une fenetre ouvrante a la francaise et a soufflet en meme temps</p>
+                    <p class="service-panel-intro">Deux en un avec Megal, vous pouvez bénéficier d'une fenêtre ouvrante à la française et à soufflet en même temps</p>
                     <div class="panel-gallery oscillo-gallery">
                         <img src="../photo/Rectangle 64.png" alt="Fenêtre oscillo-battante ouverte">
-                        <img src="../photo/Rectangle 65.png" alt="Mécanisme de fenêtre oscillo-battante">
+                        <img src="../photo/Rectangle 65.png" alt="Mécanisme de fenétre oscillo-battante">
                         <img src="../photo/Rectangle 66.png" alt="Fenêtre oscillo-battante dans une cuisine">
                     </div>
                 </div>
                 
                 <div class="service-panel" role="tabpanel" id="panel-baie-vitre" aria-labelledby="tab-baie-vitre" hidden>
-                    <p class="service-panel-intro">Élégante et lumineuse, la baie vitrée apporte une ouverture généreuse et une finition moderne à vos espaces.</p>
+                    <p class="service-panel-intro">élégante et lumineuse, la baie vitrée apporte une ouverture généreuse et une finition moderne à vos espaces.</p>
                     <div class="baie-gallery-groups">
                         <div class="baie-gallery-row">
                             <h2 class="baie-gallery-title">Repliable</h2>
@@ -1001,7 +739,7 @@
                             </div>
                         </div>
                         <div class="baie-gallery-row">
-                            <h2 class="baie-gallery-title">Seuil Zero</h2>
+                            <h2 class="baie-gallery-title">Seuil zéro</h2>
                             <div class="panel-gallery oscillo-gallery">
                                 <img src="../photo/zero1.jfif" alt="">
                                 <img src="../photo/zero2.jpg" alt="">
@@ -1012,7 +750,7 @@
                 </div>
                 
                 <div class="service-panel" role="tabpanel" id="panel-portes" aria-labelledby="tab-portes" hidden>
-                    <p class="service-panel-intro">Les portes aluminium se caracterise par leur légerete et leur robustesse avec des lignes fines</p>
+                    <p class="service-panel-intro">Les portes aluminium se caractérisent par leur légerete et leur robustesse avec des lignes fines</p>
                     <div class="panel-gallery oscillo-gallery">
                         <img src="../photo/porte1.png" alt="">
                         <img src="../photo/porte2.png" alt="">
@@ -1025,14 +763,14 @@
                     <div class="panel-gallery volet-gallery">
                         <div class="volet-card has-caption">
                             <img src="../photo/Rectangle 57.png" alt="Lame aluminium injecté pour volet roulant">
-                            <p>Volet roulant en lame aluminium injecté qui peut etre manuel ou motorisé</p>
+                            <p>Volet roulant en lame aluminium injecté qui peut être manuel ou motorisé</p>
                         </div>
                         <div class="volet-card">
-                            <img src="../photo/Rectangle 67.png" alt="Volet roulant installé sur fenêtre">
+                            <img src="../photo/Rectangle 67.png" alt="Volet roulant installé sur fenétre">
                         </div>
                         <div class="volet-card has-caption">
                             <img src="../photo/Rectangle 57-1.png" alt="Lame aluminium extrudé pour volet roulant">
-                            <p>Volet roulant en lame aluminium extrudé contre le vol et le vandalisme, est qui peut etre motorisé seulement</p>
+                            <p>Volet roulant en lame aluminium extrudé contre le vol et le vandalisme, et qui peut être motorisé seulement</p>
                         </div>
                     </div>
                 </div>
@@ -1079,7 +817,7 @@
                     <li><a href="service.html">Produits</a></li>
                     <li><a href="projet.html">Projets</a></li>
                     <li><a href="accessoires.html">Accessoires</a></li>
-                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -1099,7 +837,7 @@
         </div>
 
         <div class="copyright">
-            &copy; 2025 MEGAL. All rights reserved.
+            &copy; 2025 MEGAL. Tous droits réservés.
         </div>
     </footer>
    
@@ -1141,12 +879,6 @@
                 }
             });
         });
-
-
-
-
-
-
     </script>
 
     

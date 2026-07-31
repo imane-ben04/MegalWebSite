@@ -84,7 +84,7 @@
        .main-nav {
     justify-self: center;
     margin-top: 25px;
-    /* Suppression du min-width fixe qui forçait un espace vide */
+    /* Suppression du min-width fixe qui foréait un espace vide */
     display: inline-flex; /* Permet à la barre de s'adapter exactement à son contenu */
     align-items: center;
     border: 3px solid var(--primary);
@@ -97,7 +97,7 @@
 
 .main-nav a {
     height: 52px;
-    padding: 0 32px; /* Augmentation légère pour une meilleure répartition */
+    padding: 0 32px; /* Augmentation légére pour une meilleure répartition */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -133,24 +133,6 @@
             gap: 16px;
         }
 
-        .theme-toggle,
-        .menu-toggle {
-            width: 54px;
-            height: 54px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid var(--primary);
-            border-radius: 50%;
-            background: var(--white);
-            box-shadow: 0 2px 13px var(--primary);
-        }
-
-        .theme-toggle img {
-            width: 34px;
-            height: 34px;
-        }
-
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -163,132 +145,7 @@
             border-radius: 999px;
             background: var(--primary);
         }
-
-      .hero{
-    position: relative;
-    overflow: hidden;
-    height:630px;
-
-    background-image:url("../photo/Rectangle 6.png");
-    background-size:cover;
-    background-position:center;
-}
-
-.hero::before {
-            content: "";
-            position: absolute;
-            inset: 0 auto 0 0;
-            width: 37%; /* Ajuste la largeur globale de la zone */
-            
-            /* Blanc très atténué et transparent */
-            background: rgba(255, 255, 255, 0.45); 
-            
-            /* Un flou léger pour garder le texte bien lisible */
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            
-        }
-.hero::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px; /* hauteur de l'effet */
-
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,1) 0%,
-        rgba(255,255,255,0.85) 20%,
-        rgba(255,255,255,0.45) 55%,
-        rgba(255,255,255,0) 100%
-    );
-
-    pointer-events: none;
-}
-
-
-
-        .hero-content {
-            width: min(100%, var(--page-width));
-            height: 100%;
-            margin: 0 auto;
-            padding-left: 69px;
-            padding-top: 216px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            color: var(--primary);
-            font-size: clamp(3.6rem, 4.25vw, 4.65rem);
-            line-height: 0.95;
-            font-weight: 900;
-            letter-spacing: 0;
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin-top: 16px;
-            color: var(--black);
-            font-size: clamp(1.65rem, 2.25vw, 2.45rem);
-            line-height: 1.28;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .intro-section {
-            padding: 36px 24px 92px;
-            text-align: center;
-        }
-
-        .intro-copy p,
-        .intro-copy h2 {
-            font-size: clamp(1.8rem, 2.45vw, 2.55rem);
-            line-height: 1.08;
-            font-weight: 500;
-        }
-
-        .intro-copy span {
-            color: var(--primary);
-            font-weight: 900;
-        }
-
-        .stats-row {
-            width: min(1448px, 80%);
-            margin: 76px auto 0;
-            display: flex;
-            justify-content: space-between;
-            gap: 80px;
-        }
-
-        .stat-card {
-            width: 600px;
-            min-height: 112px;
-            padding: 14px 0px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 22px;
-            border: 3px solid var(--primary);
-            border-radius: 31px;
-            background: var(--white);
-            box-shadow: 0 0 14px var(--primary);
-        }
-
-        .stat-card img {
-            width: 58px;
-            height: 58px;
-        }
-
-        .stat-card span {
-            color: var(--black);
-            font-size: clamp(1.45rem, 2.25vw, 2.35rem);
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .section-heading {
+.section-heading {
             width: min(850px, calc(100% - 48px));
             margin: 0 auto;
             text-align: center;
@@ -307,192 +164,6 @@
             font-size: clamp(1.45rem, 2.3vw, 2.45rem);
             line-height: 1.25;
             font-weight: 500;
-        }
-
-        .services-section {
-            padding: 0 64px 109px;
-        }
-
-        .services-grid {
-            width: min(var(--content-width), 100%);
-            margin: 86px auto 0;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 480px));
-            justify-content: space-between;
-            column-gap: 72px;
-            row-gap: 40px;
-        }
-
-        .service-card {
-            min-height: 550px;
-            border: 2px solid var(--primary);
-            border-radius: 4px;
-            background: var(--white);
-            overflow: hidden;
-        }
-
-        .service-card figure {
-            width: 100%;
-            height: 352px;
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .service-card div {
-            padding: 10px 19px 26px;
-            text-align: center;
-        }
-
-        .service-card h3 {
-            color: var(--black);
-            font-size: clamp(1.55rem, 2vw, 2.08rem);
-            line-height: 1.05;
-            font-weight: 700;
-        }
-
-        .service-card p {
-            margin-top: 14px;
-            color:#6A6A6A;
-            font-size: clamp(1.15rem, 1.5vw, 1.52rem);
-            line-height: 1.31;
-            font-weight: 520;
-        }
-
-        .button-row {
-            margin-top: 66px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .primary-button {
-            min-width: 457px;
-            min-height: 73px;
-            padding: 18px 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            background: var(--primary);
-            color: var(--white);
-            font-size: clamp(1.05rem, 1.45vw, 1.45rem);
-            font-weight: 550;
-            text-align: center;
-            box-shadow: none;
-        }
-
-        .partners-section {
-            padding: 32px 64px 160px;
-        }
-
-        .partners-section .section-heading {
-            width: min(880px, calc(100% - 48px));
-        }
-
-        .partner-logos {
-            width: min(1080px, 100%);
-            min-height: 236px;
-            margin: 133px auto 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            align-items: center;
-            justify-items: center;
-            gap: 180px;
-        }
-
-        .partner-logos img {
-            object-fit: contain;
-        }
-
-        .partner-logos img:nth-child(1) {
-            width: 275px;
-        }
-
-        .partner-logos img:nth-child(2) {
-            width: 275px;
-        }
-
-        .atelier-section {
-            padding: 0 64px 151px;
-        }
-
-        .atelier-inner {
-            width: min(var(--content-width), 100%);
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 647px 1fr;
-            align-items: center;
-            gap: 51px;
-        }
-
-        .atelier-photo {
-            width: 647px;
-            height: 691px;
-            object-fit: cover;
-        }
-
-        .atelier-content {
-            padding-top: 36px;
-        }
-
-        .atelier-content h2 {
-            color: var(--black);
-            font-size: clamp(2.15rem, 3vw, 3.35rem);
-            line-height: 1.04;
-            font-weight: 700;
-        }
-
-        .address-row {
-            margin-top: 60px;
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            color:#373535;
-            font-size: clamp(1.45rem, 2.2vw, 2.3rem);
-            line-height: 1.15;
-            font-weight: 600;
-        }
-
-        .address-row img {
-            width: 69px;
-            height: 69px;
-            flex: 0 0 auto;
-        }
-
-        .atelier-content .primary-button {
-            min-width: 407px;
-            min-height: 73px;
-            margin-top: 50px;
-        }
-
-        .question-section {
-            padding: 0 24px 139px;
-            text-align: center;
-        }
-
-        .question-section h2 {
-            color: var(--black);
-            font-size: clamp(2.1rem, 3vw, 3.35rem);
-            line-height: 1.05;
-            font-weight: 700;
-        }
-
-        .question-section p {
-            width: min(765px, 100%);
-            margin: 9px auto 0;
-            color: #6A6A6A;
-            font-size: clamp(1.45rem, 2.25vw, 2.35rem);
-            line-height: 1.18;
-            font-weight: 500;
-        }
-
-        .question-section .primary-button {
-            min-width: 407px;
-            min-height: 73px;
-            margin-top: 53px;
         }
 
         .contact-section {
@@ -719,59 +390,11 @@
                 min-width: auto;
                 padding: 0 18px;
             }
-
-            .hero {
-                height: 520px;
-            }
-
-            .hero-content {
-                padding-left: 42px;
-                padding-top: 170px;
-            }
-
-            .stats-row,
-            .services-grid,
-            .atelier-inner,
             .contact-content,
             .footer-inner {
                 width: 100%;
             }
-
-            .stats-row {
-                gap: 32px;
-            }
-
-            .stat-card {
-                width: 50%;
-            }
-
-            .services-section,
-            .partners-section,
-            .atelier-section {
-                padding-left: 34px;
-                padding-right: 34px;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, minmax(0, 480px));
-                justify-content: center;
-            }
-
-            .partner-logos {
-                gap: 80px;
-            }
-
-            .atelier-inner {
-                grid-template-columns: minmax(360px, 520px) 1fr;
-                gap: 34px;
-            }
-
-            .atelier-photo {
-                width: 100%;
-                height: auto;
-            }
-
-            .footer-inner {
+.footer-inner {
                 padding: 0 48px 43px;
                 grid-template-columns: 300px 1fr 1.25fr;
                 gap: 60px;
@@ -828,17 +451,6 @@
                 margin-top: 0;
             }
 
-            .theme-toggle,
-            .menu-toggle {
-                width: 46px;
-                height: 46px;
-            }
-
-            .theme-toggle img {
-                width: 28px;
-                height: 28px;
-            }
-
             .menu-toggle {
                 display: inline-flex;
             }
@@ -865,140 +477,6 @@
             .main-nav a {
                 width: 100%;
                 height: 46px;
-            }
-
-            .hero {
-                height: 440px;
-                background-position: 58% center;
-            }
-
-            .hero::before {
-                width: 66%;
-            }
-
-            .hero-content {
-                padding: 145px 22px 0;
-            }
-
-            .intro-section {
-                padding: 32px 20px 68px;
-            }
-
-            .stats-row {
-                margin-top: 42px;
-                flex-direction: column;
-                align-items: center;
-                gap: 22px;
-            }
-
-            .stat-card {
-                width: min(460px, 100%);
-                min-height: 82px;
-                padding: 12px 20px;
-            }
-
-            .stat-card img {
-                width: 42px;
-                height: 42px;
-            }
-
-            .services-section,
-            .partners-section,
-            .atelier-section {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .services-grid {
-                margin-top: 44px;
-                grid-template-columns: minmax(0, 480px);
-                row-gap: 24px;
-            }
-
-            .service-card {
-                min-height: auto;
-            }
-
-            .button-row {
-                margin-top: 42px;
-            }
-
-            .primary-button {
-    min-width: 457px;
-    min-height: 73px;
-    padding: 18px 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    background: var(--primary);
-    color: var(--white);
-    font-size: clamp(1.05rem, 1.45vw, 1.45rem);
-    
-    /* Changez 900 par une valeur plus légère, ex: 500 (Medium) ou 600 (Semi-Bold) */
-    font-weight: 450; 
-    
-    text-align: center;
-    box-shadow: none;
-}
-
-            .partners-section {
-                padding-top: 12px;
-                padding-bottom: 86px;
-            }
-
-            .partner-logos {
-                margin-top: 56px;
-                grid-template-columns: 1fr;
-                gap: 34px;
-                min-height: 0;
-            }
-
-            .partner-logos img:nth-child(1),
-            .partner-logos img:nth-child(2) {
-                width: 220px;
-            }
-
-            .atelier-section {
-                padding-bottom: 88px;
-            }
-
-            .atelier-inner {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                text-align: center;
-            }
-
-            .atelier-photo {
-                width: min(420px, 100%);
-                margin: 0 auto;
-            }
-
-            .atelier-content {
-                padding-top: 0;
-            }
-
-            .address-row {
-                margin-top: 26px;
-                justify-content: center;
-                gap: 14px;
-            }
-
-            .address-row img {
-                width: 46px;
-                height: 46px;
-            }
-
-            .atelier-content .primary-button,
-            .question-section .primary-button {
-                min-width: 0;
-                width: min(330px, 100%);
-                min-height: 58px;
-                margin-top: 30px;
-            }
-
-            .question-section {
-                padding-bottom: 76px;
             }
 
             .contact-section {
@@ -1091,41 +569,10 @@
                 padding-inline: 14px;
             }
 
-            .hero {
-                height: 360px;
-            }
-
-            .hero::before {
-                width: 78%;
-            }
-
-            .hero-content {
-                padding-top: 118px;
-                padding-left: 18px;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.35rem;
-            }
-
             .section-heading {
                 width: 100%;
             }
-
-            .service-card figure {
-                height: auto;
-                aspect-ratio: 480 / 352;
-            }
-
-            .stat-card span {
-                white-space: normal;
-            }
-
-            .contact-section {
+.contact-section {
                 padding-inline: 18px;
             }
 
@@ -1152,7 +599,7 @@
                 <a href="service.html">Produits</a>
                 <a href="projet.html">Projets</a>
                 <a href="accessoires.html">Accessoires</a>
-                <a href="apropos.html">A propos</a>
+                <a href="apropos.html">À propos</a>
                 <a href="contact.html" aria-current="page">Contact</a>
             </nav>
 
@@ -1176,10 +623,10 @@
                         <label for="nom">Nom*</label>
                         <input id="nom" type="text" name="nom" required>
 
-                        <label for="prenom">Prenom*</label>
+                        <label for="prenom">Prénom*</label>
                         <input id="prenom" type="text" name="prenom" required>
 
-                        <label for="telephone">Telephone*</label>
+                        <label for="telephone">Téléphone*</label>
                         <input id="telephone" type="tel" name="telephone" required>
 
                         <label for="email">Email*</label>
@@ -1240,7 +687,7 @@
             });
 
             if (response.ok) {
-            status.textContent = 'Message envoyé avec succès !';
+            status.textContent = 'Message envoyé avec succés !';
             form.reset();
             } else {
             status.textContent = "Une erreur s'est produite, réessayez.";
@@ -1264,7 +711,7 @@
                     <li><a href="service.html">Produits</a></li>
                     <li><a href="projet.html">Projets</a></li>
                     <li><a href="accessoires.html">Accessoires</a></li>
-                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -1284,7 +731,7 @@
         </div>
 
         <div class="copyright">
-            &copy; 2025 MEGAL. All rights reserved.
+            &copy; 2025 MEGAL. Tous droits réservés.
         </div>
     </footer>
 
