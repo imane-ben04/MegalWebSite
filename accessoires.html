@@ -290,9 +290,28 @@
 
         .copyright {
             text-align: center;
-            padding: 20px;
+            padding: 20px 20px 6px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             font-weight: 600;
+        }
+
+        .developer-credit {
+            text-align: center;
+            padding: 0 20px 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+
+        .developer-credit a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .developer-credit a:hover {
+            opacity: 0.7;
         }
 
         /* RESPONSIVE DESIGN */
@@ -355,7 +374,7 @@
     <header class="site-header">
         <div class="header-inner">
             <a class="logo-link" href="acceuil.html" aria-label="Accueil MEGAL">
-                <img src="../photo/logonew.png" alt="MEGAL">
+                <img src="photo/logonew.png" alt="MEGAL">
             </a>
 
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
@@ -387,7 +406,7 @@
                 <!-- ARTICLE 1: COULEURS -->
                 <article class="accessory-item">
                     <div class="accessory-media">
-                        <img src="../photo/couleurs.jpg" alt="Nuancier de couleurs HPS">
+                        <img src="photo/couleurs.jpg" alt="Nuancier de couleurs HPS">
                     </div>
                     <div class="accessory-copy">
                         <h2>Couleurs</h2>
@@ -400,9 +419,9 @@
                 <!-- ARTICLE 2: POIGNéES -->
                 <article class="accessory-item">
                     <div class="accessory-media handles-grid">
-                        <img src="../photo/poignée1.png" alt="Poignées exposées">
-                        <img src="../photo/poignée2.png" alt="Présentoir de poignées">
-                        <img src="../photo/poignée3.png" alt="Poignée noire">
+                        <img src="photo/poignée1.png" alt="Poignées exposées">
+                        <img src="photo/poignée2.png" alt="Présentoir de poignées">
+                        <img src="photo/poignée3.png" alt="Poignée noire">
                     </div>
                     <div class="accessory-copy">
                         <h2>Poignées</h2>
@@ -415,7 +434,7 @@
                 <!-- ARTICLE 3: MOTEURS -->
                 <article class="accessory-item">
                     <div class="accessory-media">
-                        <img src="../photo/moteur.jpg" alt="Moteur Somfy">
+                        <img src="photo/moteur.jpg" alt="Moteur Somfy">
                     </div>
                     <div class="accessory-copy">
                         <h2>Moteurs</h2>
@@ -431,7 +450,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-logo">
-                <img src="../photo/logo_new.png" alt="MEGAL">
+                <img src="photo/logo_new.png" alt="MEGAL">
             </div>
 
             <div class="footer-column">
@@ -454,14 +473,18 @@
                     <li>+213 550 11 60 87</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="../photo/Facebook.svg" alt=""></a>
-                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="../photo/LinkedIn Circled.svg" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="photo/Facebook.svg" alt=""></a>
+                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="photo/LinkedIn Circled.svg" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
             &copy; 2025 MEGAL. Tous droits réservés.
+        </div>
+
+        <div class="developer-credit">
+            Développé par <a href="https://hamzabenrabah.netlify.app/" target="_blank" rel="noopener">Hamza</a> &amp; <a href="https://lien-personne-2.com" target="_blank" rel="noopener">Imane</a>
         </div>
     </footer>
 

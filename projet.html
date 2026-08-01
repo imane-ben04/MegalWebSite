@@ -209,11 +209,33 @@
         .copyright {
             width: min(var(--page-width), 100%);
             margin: 0 auto;
-            padding: 0 24px 53px;
+            padding: 0 24px 6px;
             color: var(--white);
             text-align: center;
             font-size: 1.28rem;
             font-weight: 700;
+        }
+
+        .developer-credit {
+            width: min(var(--page-width), 100%);
+            margin: 0 auto;
+            padding: 0 24px 40px;
+            color: var(--white);
+            text-align: center;
+            font-size: 1.05rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        .developer-credit a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .developer-credit a:hover {
+            opacity: 0.7;
         }
 
 
@@ -545,8 +567,13 @@
             }
 
             .copyright {
-                padding-bottom: 34px;
+                padding-bottom: 6px;
                 font-size: 21px;
+            }
+
+            .developer-credit {
+                padding-bottom: 26px;
+                font-size: 18px;
             }
         }
 
@@ -585,7 +612,7 @@
     <header class="site-header">
         <div class="header-inner">
             <a class="logo-link" href="acceuil.html" aria-label="Accueil MEGAL">
-                <img src="../photo/logonew.png" width="341" height="138" alt="MEGAL">
+                <img src="photo/logonew.png" width="341" height="138" alt="MEGAL">
             </a>
 
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
@@ -620,7 +647,7 @@
 
             <div class="projects-grid">
                 <article class="project-card">
-                    <img src="../photo/projet1-2.jpg" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet1-2.jpg" alt="Projet MEGAL à Mila">
                     <div class="project-content">
 <p>
     Baie vitrée H36, couleur 7024, avec double vitrage, portes à deux vantaux et à un vantail H52, en simple vitrage, avec diviseur en aluminium gris.
@@ -628,7 +655,7 @@
                     <hr>
                     <div class="project-footer">
                         <div class="location">
-                            <img src="../photo/Place Marker.svg" alt="">
+                            <img src="photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
                         <a href="#" onclick="toggleGallery(event,1)">Plus de photos</a>
@@ -639,7 +666,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/projet2-1.jpg" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet2-1.jpg" alt="Projet MEGAL à Mila">
                    <div class="project-content">
     <p>
         Portes-fenêtres à deux vantaux H52 monobloc, portes sanitaires avec verre sablé, fenétre coulissante H36 monobloc, le tout en gris RAL 7024.
@@ -650,7 +677,7 @@
 
 <div class="project-footer">
     <div class="location">
-        <img src="../photo/Place Marker.svg" alt="">
+        <img src="photo/Place Marker.svg" alt="">
         <span>Mila</span>
     </div>
 
@@ -661,7 +688,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/projet3.png" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet3.png" alt="Projet MEGAL à Mila">
                     <div class="project-content">
 <p>
     Portes-fenêtres à deux vantaux H52, fenêtres à deux vantaux H52 oscillo-battantes avec volets roulants de sécurité motorisés, intégrés dans un caisson tunnel.
@@ -669,7 +696,7 @@
                     <hr>
                     <div class="project-footer">
                         <div class="location">
-                            <img src="../photo/Place Marker.svg" alt="">
+                            <img src="photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
                         <a href="#" onclick="toggleGallery(event,3)">Plus de photos</a>
@@ -680,14 +707,14 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/projet4-1.png" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet4-1.png" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <p>Fenêtres coulissantes H36 à deux vantaux (120 Kg) avec verre double vitrage, couleur gris 7024. </p>
                     </div>
                     <hr>
                     <div class="project-footer">
                         <div class="location">
-                            <img src="../photo/Place Marker.svg" alt="">
+                            <img src="photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
                         <a href="#" onclick="toggleGallery(event,4)">Plus de photos</a>
@@ -698,14 +725,14 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/projet5-3.jpg" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet5-3.jpg" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <p>Portes repliables H21 à 4 vantaux, couleur gris 7024 avec verre simple vitrage sablé.</p>
                     </div>
                     <hr>
                     <div class="project-footer">
                         <div class="location">
-                            <img src="../photo/Place Marker.svg" alt="">
+                            <img src="photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
                         <a href="#" onclick="toggleGallery(event,5)">Plus de photos</a>
@@ -716,14 +743,14 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="../photo/projet6-3.png" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet6-3.png" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <p>Fenêtres coulissantes H36 seuil zéro à 3 vantaux (120 Kg), Portes-fenêtres à deux vantaux monobloc avec verre double vitrage.</p>
                     </div>
                     <hr>
                     <div class="project-footer">
                         <div class="location">
-                            <img src="../photo/Place Marker.svg" alt="">
+                            <img src="photo/Place Marker.svg" alt="">
                             <span>Mila</span>
                         </div>
                         <a href="#" onclick="toggleGallery(event,6)">Plus de photos</a>
@@ -739,7 +766,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-logo">
-                <img src="../photo/logo_new.png" alt="MEGAL">
+                <img src="photo/logo_new.png" alt="MEGAL">
             </div>
 
             <div class="footer-column">
@@ -762,14 +789,18 @@
                     <li>+213 550 11 60 87</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="../photo/Facebook.svg" alt=""></a>
-                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="../photo/LinkedIn Circled.svg" alt=""></a>
+                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="photo/Facebook.svg" alt=""></a>
+                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="photo/LinkedIn Circled.svg" alt=""></a>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
             &copy; 2025 MEGAL. Tous droits réservés.
+        </div>
+
+        <div class="developer-credit">
+            Développé par <a href="https://hamzabenrabah.netlify.app/" target="_blank" rel="noopener">Hamza</a> &amp; <a href="https://lien-personne-2.com" target="_blank" rel="noopener">Imane</a>
         </div>
     </footer>
 
@@ -804,44 +835,44 @@
 const galleries = {
 
     1:[
-        "../photo/projet1-1.jpg",
-        "../photo/projet1-2.jpg",
-        "../photo/projet1-3.jpg"
+        "photo/projet1-1.jpg",
+        "photo/projet1-2.jpg",
+        "photo/projet1-3.jpg"
     ],
 
     2:[
-        "../photo/projet2-1.jpg",
-        "../photo/projet2-3.jpg",
-        "../photo/projet2-2.jpg",
-        "../photo/projet2-4.jpg"
+        "photo/projet2-1.jpg",
+        "photo/projet2-3.jpg",
+        "photo/projet2-2.jpg",
+        "photo/projet2-4.jpg"
     ],
 
     3:[
-        "../photo/projet3-1.jpg",
-        "../photo/projet3-2.jpg",
-        "../photo/projet3.png",
-        "../photo/projet3-3.jpg"
+        "photo/projet3-1.jpg",
+        "photo/projet3-2.jpg",
+        "photo/projet3.png",
+        "photo/projet3-3.jpg"
     ],
      
      4:[
-        "../photo/projet4-1.png",
-        "../photo/projet4-2.png",
-        "../photo/projet4-3.png",
+        "photo/projet4-1.png",
+        "photo/projet4-2.png",
+        "photo/projet4-3.png",
        
     ],
 
     5:[
-        "../photo/projet5-3.jpg",
-        "../photo/projet5-2.jpg",
-        "../photo/projet5-1.jpg",
+        "photo/projet5-3.jpg",
+        "photo/projet5-2.jpg",
+        "photo/projet5-1.jpg",
        
     ],
 
     6:[
-        "../photo/projet6-3.png",
-        "../photo/projet6-1.png",
-        "../photo/projet6-2.png",
-        "../photo/projet6-4.png",
+        "photo/projet6-3.png",
+        "photo/projet6-1.png",
+        "photo/projet6-2.png",
+        "photo/projet6-4.png",
        
     ]
 

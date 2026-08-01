@@ -363,11 +363,33 @@
         .copyright {
             width: min(var(--page-width), 100%);
             margin: 0 auto;
-            padding: 0 24px 53px;
+            padding: 0 24px 6px;
             color: var(--white);
             text-align: center;
             font-size: 1.28rem;
             font-weight: 700;
+        }
+
+        .developer-credit {
+            width: min(var(--page-width), 100%);
+            margin: 0 auto;
+            padding: 0 24px 40px;
+            color: var(--white);
+            text-align: center;
+            font-size: 1.05rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        .developer-credit a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .developer-credit a:hover {
+            opacity: 0.7;
         }
 
         @media (max-width: 1180px) {
@@ -560,7 +582,11 @@
             }
 
             .copyright {
-                padding-bottom: 34px;
+                padding-bottom: 6px;
+            }
+
+            .developer-credit {
+                padding-bottom: 26px;
             }
         }
 
@@ -591,7 +617,7 @@
     <header class="site-header">
         <div class="header-inner">
             <a class="logo-link" href="acceuil.html" aria-label="Accueil MEGAL">
-                <img src="../photo/logonew.png" width="341" height="138" alt="MEGAL">
+                <img src="photo/logonew.png" width="341" height="138" alt="MEGAL">
             </a>
 
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
@@ -642,31 +668,31 @@
 
                 <div id="infos">
                     <div class="info-row">
-                        <img src="../photo/Place Marker.svg" alt="">
+                        <img src="photo/Place Marker.svg" alt="">
                         <h4>90, Rue Idri Abdelhamid. Mila</h4>
                     </div>
 
                     <div class="info-row">
-                        <img src="../photo/Envelope.svg" alt="">
+                        <img src="photo/Envelope.svg" alt="">
                         <h4>bonada26@gmail.com</h4>
                     </div>
 
                     <div class="info-row">
-                        <img src="../photo/Phone.svg" alt="">
+                        <img src="photo/Phone.svg" alt="">
                         <h4>0552 89 41 97</h4>
                     </div>
 
                     <div class="info-row">
-                        <img src="../photo/Phone.svg" alt="">
+                        <img src="photo/Phone.svg" alt="">
                         <h4>0550 11 60 87</h4>
                     </div>
 
                     <div class="contact-socials">
-                        <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="../photo/Facebook.svg" alt=""></a>
-                        <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="../photo/LinkedIn Circled.svg" alt=""></a>
+                        <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="photo/Facebook.svg" alt=""></a>
+                        <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="photo/LinkedIn Circled.svg" alt=""></a>
                     </div>
 
-                    <img class="contact-photo" src="../photo/Rectangle 41.png" alt="Interieur realise par MEGAL">
+                    <img class="contact-photo" src="photo/Rectangle 41.png" alt="Interieur realise par MEGAL">
                 </div>
             </div>
 
@@ -701,7 +727,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-logo">
-                <img src="../photo/logo_new.png" alt="MEGAL">
+                <img src="photo/logo_new.png" alt="MEGAL">
             </div>
 
             <div class="footer-column">
@@ -724,14 +750,18 @@
                     <li>+213 552 89 41 97</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="../photo/Facebook.svg" alt=""></a>
-                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="../photo/LinkedIn Circled.svg" alt="" target></a>
+                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="photo/Facebook.svg" alt=""></a>
+                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="photo/LinkedIn Circled.svg" alt="" target></a>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
             &copy; 2025 MEGAL. Tous droits réservés.
+        </div>
+
+        <div class="developer-credit">
+            Développé par <a href="https://hamzabenrabah.netlify.app/" target="_blank" rel="noopener">Hamza</a> &amp; <a href="https://lien-personne-2.com" target="_blank" rel="noopener">Imane</a>
         </div>
     </footer>
 

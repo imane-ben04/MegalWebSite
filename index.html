@@ -217,6 +217,17 @@
             text-transform: uppercase;
         }
 
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            max-width: min(650px, 90%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 68px;
+        }
+
         .hero-bg{
     position:absolute;
     inset:0;
@@ -551,11 +562,33 @@
         .copyright {
             width: min(var(--page-width), 100%);
             margin: 0 auto;
-            padding: 0 24px 53px;
+            padding: 0 24px 6px;
             color: var(--white);
             text-align: center;
             font-size: 1.28rem;
             font-weight: 700;
+        }
+
+        .developer-credit {
+            width: min(var(--page-width), 100%);
+            margin: 0 auto;
+            padding: 0 24px 40px;
+            color: var(--white);
+            text-align: center;
+            font-size: 1.05rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        .developer-credit a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s ease;
+        }
+
+        .developer-credit a:hover {
+            opacity: 0.7;
         }
 
 
@@ -684,6 +717,10 @@
                 height: 520px;
             }
 
+            .hero-content {
+                padding: 0 34px;
+            }
+
             .stats-row,
             .services-grid,
             .atelier-inner,
@@ -794,6 +831,10 @@
 
             .hero::before {
                 width: 66%;
+            }
+
+            .hero-content {
+                padding: 0 20px;
             }
 
             .intro-section {
@@ -942,7 +983,11 @@
             }
 
             .copyright {
-                padding-bottom: 34px;
+                padding-bottom: 6px;
+            }
+
+            .developer-credit {
+                padding-bottom: 26px;
             }
         }
 
@@ -987,7 +1032,7 @@
     <header class="site-header">
         <div class="header-inner">
             <a class="logo-link" href="acceuil.html" aria-label="Accueil MEGAL">
-                <img src="../photo/logonew.png" width="341" height="138" alt="MEGAL">
+                <img src="photo/logonew.png" width="341" height="138" alt="MEGAL">
             </a>
 
             <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
@@ -1026,11 +1071,11 @@
 
             <div class="stats-row">
                 <div class="stat-card">
-                    <img src="../photo/Male User.svg" alt="">
+                    <img src="photo/Male User.svg" alt="">
                     <span>+600 Clients satisfaits</span>
                 </div>
                 <div class="stat-card">
-                    <img src="../photo/Briefcase.svg" alt="">
+                    <img src="photo/Briefcase.svg" alt="">
                     <span>+28 ans d'expérience</span>
                 </div>
             </div>
@@ -1044,7 +1089,7 @@
 
             <div class="services-grid">
                 <article class="service-card">
-                    <figure><img src="../photo/Rectangle 17.png" alt="Fenêtre coulissante"></figure>
+                    <figure><img src="photo/Rectangle 17.png" alt="Fenêtre coulissante"></figure>
                     <div>
                         <h3>Fenêtre coulissante</h3>
                         <p>Design moderne et gain d'espace, elle offre une ouverture fluide et une vue dégagée vers l'extérieur</p>
@@ -1052,7 +1097,7 @@
                 </article>
 
                 <article class="service-card">
-                    <figure><img src="../photo/Rectangle 18.png" alt="Fenêtre ouvrante"></figure>
+                    <figure><img src="photo/Rectangle 18.png" alt="Fenêtre ouvrante"></figure>
                     <div>
                         <h3>Fenêtre ouvrante</h3>
                         <p>Une ouverture classique et pratique, idéale pour allier aération et luminosité dans toutes vos piéces</p>
@@ -1060,7 +1105,7 @@
                 </article>
 
                 <article class="service-card">
-                    <figure><img src="../photo/Rectangle 19.png" alt="Porte en aluminium"></figure>
+                    <figure><img src="photo/Rectangle 19.png" alt="Porte en aluminium"></figure>
                     <div>
                         <h3>Portes</h3>
                         <p>Solide, esthétique et durable, elle assure sécurité et élégance à votre entrée</p>
@@ -1068,7 +1113,7 @@
                 </article>
 
                 <article class="service-card">
-                    <figure><img src="../photo/Rectangle 23.png" alt="Baie vitrée"></figure>
+                    <figure><img src="photo/Rectangle 23.png" alt="Baie vitrée"></figure>
                     <div>
                         <h3>Baie vitrée</h3>
                         <p>élégante et lumineuse, elle offre une vue panoramique sur l'extérieur tout en sublimant votre intérieur</p>
@@ -1076,7 +1121,7 @@
                 </article>
 
                 <article class="service-card">
-                    <figure><img src="../photo/Rectangle 24.png" alt="Fenêtre oscillo-battante"></figure>
+                    <figure><img src="photo/Rectangle 24.png" alt="Fenêtre oscillo-battante"></figure>
                     <div>
                         <h3>Fenêtre oscillo-battante</h3>
                         <p>Polyvalente et sécurisée, elle combine ouverture franéaise et basculante pour une ventilation maétrisée</p>
@@ -1084,7 +1129,7 @@
                 </article>
 
                 <article class="service-card">
-                    <figure><img src="../photo/Rectangle 25.png" alt="Volet roulant"></figure>
+                    <figure><img src="photo/Rectangle 25.png" alt="Volet roulant"></figure>
                     <div>
                         <h3>Volet roulant</h3>
                         <p>Confort et protection assurés, ils améliorent l'isolation thermique et la sécurité de votre habitat</p>
@@ -1104,18 +1149,18 @@
             </div>
 
             <div class="partner-logos" aria-label="Partenaires">
-                <img src="../photo/HPS.png" alt="HPS">
-                <img src="../photo/somfy.png" alt="Somfy">
+                <img src="photo/HPS.png" alt="HPS">
+                <img src="photo/somfy.png" alt="Somfy">
             </div>
         </section>
 
         <section class="atelier-section">
             <div class="atelier-inner">
-                <img class="atelier-photo" src="../photo/atelier.png" alt="Atelier MEGAL">
+                <img class="atelier-photo" src="photo/atelier.png" alt="Atelier MEGAL">
                 <div class="atelier-content">
                     <h2>Visitez notre atelier</h2>
                     <div class="address-row">
-                        <img src="../photo/Place Marker.svg" alt="">
+                        <img src="photo/Place Marker.svg" alt="">
                         <p>90, Rue Idri Abdelhamid, Mila</p>
                     </div>
                     <a class="primary-button" href="https://www.google.com/maps/place/MegalBen/@36.4492119,6.2689344,17z/data=!3m1!4b1!4m6!3m5!1s0x12f22d521207e62b:0x6e34fd5c9644585a!8m2!3d36.4492119!4d6.2689344!16s%2Fg%2F11j7ylc5db?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Voir sur map</a>
@@ -1133,7 +1178,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-logo">
-                <img src="../photo/logo_new.png" alt="MEGAL">
+                <img src="photo/logo_new.png" alt="MEGAL">
             </div>
 
             <div class="footer-column">
@@ -1156,18 +1201,22 @@
                     <li>+213 552 89 41 97</li>
                 </ul>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="../photo/Facebook.svg" alt=""></a>
-                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="../photo/LinkedIn Circled.svg" alt=""></a>
+                    <a href="https://www.facebook.com/megalben/?locale=ar_AR" aria-label="Facebook MEGAL" target="_blank"><img src="photo/Facebook.svg" alt=""></a>
+                    <a href="https://dz.linkedin.com/in/megal-ben-196613293" aria-label="LinkedIn MEGAL" target="_blank"><img src="photo/LinkedIn Circled.svg" alt=""></a>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
-            &copy; 2025 MEGAL. Tous droits réservés.
+            &copy; 2026 MEGAL. Tous droits réservés.
+        </div>
+
+        <div class="developer-credit">
+            Développé par <a href="https://hamzabenrabah.netlify.app/" target="_blank" rel="noopener">Hamza</a> &amp; <a href="https://lien-personne-2.com" target="_blank" rel="noopener">Imane</a>
         </div>
     </footer>
     <div id="assistant">
-     <img src="../photo/personnage.png" alt="Assistant">
+     <img src="photo/personnage.png" alt="Assistant">
 
      <a href="contact.html" class="speech-bubble">
         Contactez-nous
@@ -1195,10 +1244,10 @@
 const hero = document.querySelector(".hero");
 
 const images = [
-    "../photo/image_acceuil2.webp",
-    "../photo/image_acceuil4.png",
-    "../photo/image_acceuil6.png",
-    "../photo/image_acceuil7.png"
+    "photo/image_acceuil2.webp",
+    "photo/image_acceuil4.png",
+    "photo/image_acceuil6.png",
+    "photo/image_acceuil7.png"
 ];
 
 // Précharger les images
