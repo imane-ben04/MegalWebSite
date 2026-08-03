@@ -3,12 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
     <title>Nos Réalisations | MEGAL Menuiserie Aluminium</title>
 
 <meta
@@ -47,6 +41,21 @@
 />
 <link rel="icon" type="image/png" href="/MegalWebSite/photo/favicon.png">
     <style>
+        @font-face {
+            font-family: "Inter";
+            src: url("fonts/InterVariable.woff2") format("woff2");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Nunito";
+            src: url("fonts/Nunito-VariableFont_wght.woff2") format("woff2");
+            font-weight: 200 1000;
+            font-style: normal;
+            font-display: swap;
+        }
         :root {
             --primary: #2A37F4;
             --black: #000000;
@@ -689,7 +698,7 @@
 
             <div class="projects-grid">
                 <article class="project-card">
-                    <img src="photo/projet1-2.jpg" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet1-2.jpg" alt="Projet MEGAL à Mila" fetchpriority="high">
                     <div class="project-content">
 <p>
     Baie vitrée H36, couleur 7024, avec double vitrage, portes à deux vantaux et à un vantail H52, en simple vitrage, avec diviseur en aluminium gris.
