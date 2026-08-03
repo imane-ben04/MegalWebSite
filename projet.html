@@ -43,7 +43,7 @@
 
 <meta
   property="og:image"
-  content="https://megalben.com/photo/logo_new.png"
+  content="https://megalben.com/photo/logo_new.webp"
 />
 <link rel="icon" type="image/png" href="/MegalWebSite/photo/favicon.png">
     <style>
@@ -460,7 +460,9 @@
 
             .main-nav a {
                 padding: 0 20px;
-                font-size: 19px;
+                font-size: 14px;
+                font-weight: 600;
+                font-family: Inter;
             }
 
             .projects-section {
@@ -491,37 +493,39 @@
             }
         }
 
-        @media (max-width: 860px) {
+        @media (max-width: 820px) {
             body.nav-open {
                 overflow: hidden;
             }
 
             .header-inner {
-                height: 96px;
+                height: 92px;
                 padding: 16px 20px 0;
                 grid-template-columns: 1fr auto;
+                align-items: start;
             }
 
             .logo-link,
             .logo-link img {
-                width: 126px;
+                width: 128px;
             }
 
             .header-actions {
+                grid-column: 2;
                 margin-top: 0;
             }
 
             .menu-toggle {
-                width: 46px;
-                height: 46px;
                 display: inline-flex;
             }
 
             .main-nav {
                 position: fixed;
                 inset: 86px 18px auto;
-                min-height: 0;
-                margin-top: 0;
+                min-width: 0;
+                min-height: auto;
+                border-radius: 24px;
+                padding: 12px;
                 display: grid;
                 transform: translateY(-18px);
                 opacity: 0;
@@ -537,8 +541,10 @@
 
             .main-nav a {
                 width: 100%;
-                height: 48px;
-                font-size: 18px;
+                height: 46px;
+                font-size: 14px;
+                font-weight: 600;
+                font-family: Inter;
             }
 
             .projects-section {
@@ -743,7 +749,7 @@
                 </article>
 
                 <article class="project-card">
-                    <img src="photo/projet4-1.png" alt="Projet MEGAL à Mila">
+                    <img src="photo/projet4-1.webp" alt="Projet MEGAL à Mila">
                     <div class="project-content">
                         <p>Fenêtres coulissantes H36 à deux vantaux (120 Kg) avec verre double vitrage, couleur gris 7024. </p>
                     </div>
@@ -802,7 +808,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-logo">
-                <img src="photo/logo_new.png" alt="MEGAL">
+                <img src="photo/logo_new.webp" alt="MEGAL">
             </div>
 
             <div class="footer-column">
@@ -891,9 +897,9 @@ const galleries = {
     ],
      
      4:[
-        "photo/projet4-1.png",
-        "photo/projet4-2.png",
-        "photo/projet4-3.png",
+        "photo/projet4-1.webp",
+        "photo/projet4-2.webp",
+        "photo/projet4-3.webp",
        
     ],
 
